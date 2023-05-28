@@ -18,7 +18,7 @@ function closeMenu() {
   <header aria-label="Header"
     class="fixed z-10 flex items-stretch justify-between w-full px-6 py-2 transition-all duration-300 ease-in-out translate-y-0 bg-white lg:py-0">
     <div class="flex items-center">
-      <RouterLink to="/index">
+      <RouterLink to="/">
         <logoLong />
       </RouterLink>
     </div>
@@ -28,19 +28,19 @@ function closeMenu() {
         :class="{ '!visible opacity-100': activeMenu }" v-scroll-lock="activeMenu">
         <ul class="items-center text-sm text-black lg:flex-row mt-[10vh] text-center lg:m-0 flex-col flex">
           <li class="menu-item">
-            <RouterLink @click="closeMenu" class="menu-link" to="/"> Nos produits
+            <RouterLink @click="closeMenu" class="menu-link" to="/products"> Nos produits
             </RouterLink>
           </li>
           <li class="menu-item">
-            <RouterLink @click="closeMenu" class="menu-link" to="/"> Nos cagettes
+            <RouterLink @click="closeMenu" class="menu-link" to="/abonnements"> Nos cagettes
             </RouterLink>
           </li>
           <li class="menu-item">
-            <RouterLink @click="closeMenu" class="menu-link" to="/">Déposer des produits
+            <RouterLink @click="closeMenu" class="menu-link" to="/dons">Déposer des produits
             </RouterLink>
           </li>
           <li class="menu-item">
-            <RouterLink @click="closeMenu" class="menu-link" to="/"> À propos </RouterLink>
+            <RouterLink @click="closeMenu" class="menu-link" to="/about"> À propos </RouterLink>
           </li>
           <li class="mt-10 menu-item">
             <RouterLink @click="closeMenu"
@@ -54,7 +54,7 @@ function closeMenu() {
             </RouterLink>
           </li>
         </ul>
-        <Logo class="m-auto mt-[5vh] lg:hidden" />
+        <RouterLink @click="closeMenu" to="/"><Logo class="m-auto mt-[5vh] lg:hidden" /></RouterLink>
       </nav>
 
       <div class="flex items-center">
