@@ -8,11 +8,7 @@ import FooterPage from './components/FooterPage.vue'
 <template>
   <HeaderPage />
 
-<<<<<<< HEAD
   <main class="pt-[64px] md:pt-[72px] lg:pt-[128px]">
-=======
-  <main>
->>>>>>> origin/master
     <RouterView />
   </main>
 
