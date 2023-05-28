@@ -6,11 +6,9 @@ import CardEtape from '@/components/CardEtape.vue';
 </script>
 <template>
     <Hero title="Prenez goût à l'anti-gaspi, 
-    faites des économies&nbsp;! " imgPath="/img/hero-pic-mobile.webp" imgAlt="Fruits et légumes"
-        class="md:hidden " />
+    faites des économies&nbsp;! " imgPath="/img/hero-pic-mobile.webp" imgAlt="Fruits et légumes" class="md:hidden " />
     <Hero title="Prenez goût à l'anti-gaspi, 
-    faites des économies&nbsp;! " imgPath="/img/hero-pic.webp" imgAlt="Fruits et légumes"
-        class="hidden md:block " />
+    faites des économies&nbsp;! " imgPath="/img/hero-pic.webp" imgAlt="Fruits et légumes" class="hidden md:block " />
     <section>
         <div class="flex flex-col justify-center gap-4 mx-4 my-8">
             <img src="/img/illu-ble.webp" alt="épis de blé" class="max-w-[54px] m-auto">
@@ -37,7 +35,8 @@ import CardEtape from '@/components/CardEtape.vue';
         <div class="flex flex-col justify-center gap-4 mx-4 my-8">
             <img src="/img/illu-panier.webp" alt="panier de légumes" class="max-w-[54px] m-auto">
             <h2 class="text-4xl font-bold text-center lg:text-6xl">Composez votre cagette&nbsp;!</h2>
-            <p class="text-center lg:text-xl">Légumes de saison, fruits rouges... Vous souhaitez un produit bien particulier&nbsp;?</p>
+            <p class="text-center lg:text-xl">Légumes de saison, fruits rouges... Vous souhaitez un produit bien
+                particulier&nbsp;?</p>
         </div>
 
         <CardEtape />
@@ -46,15 +45,17 @@ import CardEtape from '@/components/CardEtape.vue';
     <div class="flex flex-col justify-center gap-4 mx-4 my-8">
         <img src="/img/illu-eco.webp" alt="panier de légumes" class="max-w-[54px] m-auto">
         <h2 class="text-4xl font-bold text-center lg:text-6xl">Sauver des produits&nbsp;?! <br>Comment ça marche&nbsp;?</h2>
-                <img src="/img/deco-poire-banane.webp" alt="panier de légumes" class="m-auto">
+        <img src="/img/deco-poire-banane.webp" alt="panier de légumes" class="m-auto left-[5vw] lg:absolute z-[-1]">
         <p class="text-center lg:text-xl">Vous avez un potager, des invendus, des produits en trop&nbsp;? <br>
             Donnez-les pour bénéficier de nombreuses réductions&nbsp;!</p>
-                    <img src="/img/deco-avocat-poivron.webp" alt="panier de légumes" class="m-auto">
-                    <p class="text-center lg:text-xl">Nous récupérons les produits trop <span class="uppercase text-orange">PETITS</span>, trop <span class="uppercase text-orange">TORDUS</span>, trop <span class="uppercase text-orange">DIFFORMES</span>.
-    </p>
-    <h3 class="text-3xl font-bold text-center text-lightgreen lg:text-5xl">Mais toujours aussi savoureux&nbsp;!</h3>
-                <RouterLink to="/"
-                    class="px-4 py-2 m-auto my-8 text-center text-white rounded-xl hover:bg-lightgreen hover:text-white active:border-lightgreen active:border-4 bg-orange lg:text-xl w-fit">
-                    FAIRE UN DON</RouterLink>
+        <img src="/img/deco-avocat-poivron.webp" alt="panier de légumes" class="right-[5vw] m-auto lg:absolute z-[-1]">
+        <p class="text-center lg:text-xl">Nous récupérons les produits trop <span
+                class="uppercase text-orange">PETITS</span>, trop <span class="uppercase text-orange">TORDUS</span>, trop
+            <span class="uppercase text-orange">DIFFORMES</span>.
+        </p>
+        <h3 class="text-3xl font-bold text-center text-lightgreen lg:text-5xl">Mais toujours aussi savoureux&nbsp;!</h3>
+        <RouterLink to="/"
+            class="px-4 py-2 m-auto my-8 text-center text-white rounded-xl hover:bg-lightgreen hover:text-white active:border-lightgreen active:border-4 bg-orange lg:text-xl w-fit">
+            FAIRE UN DON</RouterLink>
     </div>
 </template>
