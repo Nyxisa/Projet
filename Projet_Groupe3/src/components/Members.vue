@@ -9,7 +9,7 @@ import linkedin from '@/components/icons/linkedin.vue';
                 <div>
                     <h2 class="text-2xl font-bold text-right text-white">Lisa</h2>
                     <p class="mt-4 text-sm text-right text-white max-w-[100px]">Manageuse du groupe</p>
-                    <a href="#" class="flex justify-end mt-4">
+                    <a href="https://www.linkedin.com/in/lisacgln/" class="flex justify-end mt-4">
                         <linkedin />
                     </a>
                 </div>
@@ -23,7 +23,7 @@ import linkedin from '@/components/icons/linkedin.vue';
                 <div>
                     <h2 class="text-2xl font-bold text-white">Julia</h2>
                     <p class="mt-4 text-sm text-white max-w-[100px]">Chargée de relation avec nos partenaires</p>
-                    <a href="#" class="flex justify-start mt-4">
+                    <a href="https://www.linkedin.com/in/julia-duflot/" class="flex justify-start mt-4">
                         <linkedin />
                     </a>
                 </div>
@@ -37,7 +37,7 @@ import linkedin from '@/components/icons/linkedin.vue';
                 <div>
                     <h2 class="text-2xl font-bold text-right text-white">Jaël</h2>
                     <p class="mt-4 text-sm text-right text-white max-w-[100px]">Chargée de communication</p>
-                    <a href="#" class="flex justify-end mt-4">
+                    <a href="https://www.linkedin.com/in/jaël-amemoutou/" class="flex justify-end mt-4">
                         <linkedin />
                     </a>
                 </div>
