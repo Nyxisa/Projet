@@ -90,4 +90,6 @@ ul, li {
   .btn-cagette-card {
     @apply px-2 py-1;
   }
+  .footer-link {
+  @apply block py-1 font-sans text-sm text-center text-white md:text-left}
 }

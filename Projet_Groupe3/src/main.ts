@@ -8,10 +8,25 @@ import './assets/css/style.css'
 
 const app = createApp(App)
 
+const scrollToAnchor = (to) => {
+  if (to.hash) {
+    const element = document.getElementById(to.hash.slice(1));
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      return;
+    }
+  }
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
+
 app.use(
   createRouter({
     history: createWebHistory(),
-    routes
+    routes,
+    scrollBehavior(to, from, savedPosition) {
+    scrollToAnchor(to);
+  },
   })
 )
 

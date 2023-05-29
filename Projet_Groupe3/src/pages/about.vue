@@ -9,10 +9,10 @@ import Members from '@/components/Members.vue'
             <h1 class="text-2xl font-bold text-darkgreen lg:text-6xl">La Cagette Fermière&nbsp;? Qui sommes-nous&nbsp;?</h1>
         </div>
     </div>
-    <section class="p-[7vw] md:flex-row-reverse md:flex gap-8 items-center">
+    <section class="p-[7vw] md:flex-row-reverse md:flex gap-8 items-center justify-center">
         <img src="/img/about-confiture.webp" alt="pots de confiture"
             class="md:max-w-[300px] h-fit xl:max-w-[600px] lg:max-w-[400px]">
-        <div>
+        <div  class="max-w-[900px]">
             <h2 class="pt-6 text-3xl font-bold lg:text-6xl">À propos de La Cagette Fermière</h2>
             <p class="font-serif text-2xl font-bold lg:text-xl text-darkgreen">Vous en avez assez du gaspillage
                 alimentaire&nbsp;?<br>Nous aussi&nbsp;!</p>
@@ -25,10 +25,10 @@ import Members from '@/components/Members.vue'
                 surface&nbsp;!</p>
         </div>
     </section>
-    <section class="px-[7vw] md:flex-row md:flex items-center gap-8">
+    <section class="px-[7vw] md:flex-row md:flex items-center gap-8 justify-center">
         <img src="/img/about-fraises.webp" alt="plat rempli de fraises"
             class="md:max-w-[300px] h-fit xl:max-w-[600px] lg:max-w-[400px]">
-            <div>
+            <div class="max-w-[900px]">
         <h2 class="pt-6 text-3xl font-bold lg:text-6xl">Notre histoire</h2>
         <p class="font-serif text-2xl font-bold lg:text-xl text-darkgreen">Étudiantes en But MMI & écolo</p>
         <p class="pt-2 text-sm text-black lg:text-xl">Nous sommes des étudiantes en BUT Métiers du Multimédia et de
