@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Logo from '@/components/icons/Logo.vue'
+import Logo from '@/components/icons/logo.vue'
 import facebook from '@/components/icons/facebook.vue'
 import instagram from '@/components/icons/instagram.vue'
 

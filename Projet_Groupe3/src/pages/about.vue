@@ -1,7 +1,5 @@
-<script lang="ts">
-import Facebook from '@/components/icons/facebook.vue';
-import type linkedinVue from '@/components/icons/linkedin.vue';
-import linkedin from '@/components/icons/linkedin.vue';
+<script setup lang="ts">
+import Members from '@/components/Members.vue'
 </script>
 
 <template>
@@ -38,21 +36,6 @@ import linkedin from '@/components/icons/linkedin.vue';
     </section>
     <section class="p-[7vw]">
         <h2 class="text-3xl font-bold lg:text-6xl">Les membres de l'équipe</h2>
-        <div class="relative p-4 m-auto">
-            <img src="/img/lisa-mobile.webp" alt="Avatar de Lisa">
-        </div>
-<linkedin class="w-[36px] h-[36px] flex absolute" />
+        <Members />
     </section>
-
-    <section class="p-[7vw]">
-        <h2 class="text-3xl font-bold lg:text-6xl">Les membres de l'équipe</h2>
-        <div class="relative p-4 m-auto">
-            <img src="/img/lisa-mobile.webp" alt="Avatar de Lisa">
-            <a href="https://www.linkedin.com/" target="_blank" class="absolute inset-0 flex items-center justify-center">
-                <Facebook class="w-[36px] h-[36px] text-lightgreen" viewBox="0 0 24 24"/>
-            </a>
-        </div>
-    </section>
-
-    
 </template>
