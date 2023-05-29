@@ -33,23 +33,23 @@ import instagram from '@/components/icons/instagram.vue'
 
             <nav class="my-6 md:grid md:col-span-2 md:col-start-4">
                 <h4 class="font-serif text-2xl text-center text-white md:text-left">La cagette fermière</h4>
-                <RouterLink to="/" class="footer-link">Nos produits</RouterLink>
-                <RouterLink to="/" class="footer-link">Nos cagettes</RouterLink>
-                <RouterLink to="/" class="footer-link">Faire un don de produits</RouterLink>
+                <RouterLink to="/products" class="footer-link">Nos produits</RouterLink>
+                <RouterLink to="/abonnements" class="footer-link">Nos cagettes</RouterLink>
+                <RouterLink to="/dons" class="footer-link">Faire un don de produits</RouterLink>
             </nav>
 
             <nav class="my-6 md:grid md:col-span-2 md:col-start-6">
                 <h4 class="font-serif text-2xl text-center text-white md:text-left">À propos</h4>
-                <RouterLink to="/" class="footer-link">Qui sommes-nous</RouterLink>
-                <RouterLink to="/" class="footer-link">Nos partenaires</RouterLink>
-                <RouterLink to="/" class="footer-link">Nos producteurs</RouterLink>
+                <RouterLink to="/about" class="footer-link">Qui sommes-nous</RouterLink>
+                <RouterLink to="/partenaires" class="footer-link">Nos partenaires</RouterLink>
+                <RouterLink to="/productors" class="footer-link">Nos producteurs</RouterLink>
             </nav>
 
             <nav class="my-6 md:grid md:col-span-2 md:col-start-8">
                 <h4 class="font-serif text-2xl text-center text-white md:text-left">Informations</h4>
-                <RouterLink to="/" class="footer-link">Politique de confidentalité</RouterLink>
-                <RouterLink to="/" class="footer-link">Utilisation des cookies</RouterLink>
-                <RouterLink to="/" class="footer-link">Mentions légales</RouterLink>
+                <RouterLink to="/legals#1" class="footer-link">Politique de confidentalité</RouterLink>
+                <RouterLink to="/legals#2" class="footer-link">Utilisation des cookies</RouterLink>
+                <RouterLink to="/legals#3" class="footer-link">Mentions légales</RouterLink>
             </nav>
 
             <div class="my-6 md:grid md:col-span-2 md:col-start-10">
