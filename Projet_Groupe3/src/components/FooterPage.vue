@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Logo from '@/components/icons/Logo.vue'
+import Logo from '@/components/icons/logo.vue'
 import facebook from '@/components/icons/facebook.vue'
 import instagram from '@/components/icons/instagram.vue'
 
@@ -7,7 +7,7 @@ import instagram from '@/components/icons/instagram.vue'
 
 <template>
     <footer>
-        <div class="w-full gap-5 py-8 bg-brown md:grid md:grid-cols-principal">
+        <div class="w-full gap-5 py-8 bg-brown md:grid">
             <div class="flex flex-row justify-center col-span-2 col-start-2 gap-4 md:flex-col md:gap-0">
                 <Logo />
                 <div class="gap-4 md:flex-col md:flex">
