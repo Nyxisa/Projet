@@ -40,7 +40,7 @@ import instagram from '@/components/icons/instagram.vue'
 
             <nav class="col-span-2 col-start-6 my-6">
                 <h4 class="font-serif text-2xl text-center text-white md:text-left">À propos</h4>
-                <RouterLink to="/about" class="footer-link">Qui sommes-nous</RouterLink>
+                <RouterLink to="/about" class="footer-link">Qui sommes-nous&nbsp;?</RouterLink>
                 <RouterLink to="/partenaires" class="footer-link">Nos partenaires</RouterLink>
                 <RouterLink to="/productors" class="footer-link">Nos producteurs</RouterLink>
             </nav>

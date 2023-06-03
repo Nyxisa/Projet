@@ -39,7 +39,7 @@ export default defineComponent({
 </script>
 
 <template>
-    <div class="m-auto my-8">
+    <div class="m-auto my-8 xl:w-[550px] lg:w-[400px] lg:mx-0">
         <form @submit.prevent="submitForm" class="">
             <div>
                 <label for="nom" class="font-serif text-2xl font-bold">Nom</label>
