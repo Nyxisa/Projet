@@ -5,6 +5,15 @@ import shoppingBag from "./icons/shoppingBag.vue";
 import logoLong from "./icons/logoLong.vue";
 import { RouterLink } from 'vue-router'
 import Logo from './icons/logo.vue';
+import { useWindowScroll } from '@vueuse/core'
+
+const { y } = useWindowScroll()
+const underLimit = computed(() => y.value < 400)
+
+const dirTop = ref(true)
+watch(y, (y, oldY) => {
+  dirTop.value = y < oldY
+})
 
 const activeMenu = ref(false)
 
@@ -16,7 +25,11 @@ function closeMenu() {
 
 <template>
   <header aria-label="Header"
-    class="fixed z-10 flex items-stretch justify-between w-full px-6 py-2 transition-all duration-300 ease-in-out translate-y-0 bg-white lg:py-0">
+    class="fixed z-10 flex items-stretch justify-between w-full px-6 py-2 transition-all duration-300 ease-in-out translate-y-0 bg-white lg:py-0"
+    :class="{
+      '!-translate-y-full !bg-transparent': !dirTop,
+      '!bg-cream lg:!bg-cream': underLimit
+    }">
     <div class="flex items-center">
       <RouterLink to="/">
         <logoLong />
@@ -54,7 +67,9 @@ function closeMenu() {
             </RouterLink>
           </li>
         </ul>
-        <RouterLink @click="closeMenu" to="/"><Logo class="m-auto mt-[5vh] lg:hidden" /></RouterLink>
+        <RouterLink @click="closeMenu" to="/">
+          <Logo class="m-auto mt-[5vh] lg:hidden" />
+        </RouterLink>
       </nav>
 
       <div class="flex items-center">
@@ -75,15 +90,14 @@ function closeMenu() {
 
         <button class="relative z-10 flex flex-col justify-between w-8 h-5 lg:hidden" @click="activeMenu = !activeMenu">
           <div class="ease h-[2px] w-full transform rounded-full bg-black transition duration-300"
-            :class="{ 'translate-y-[9px] rotate-45 bg-black': activeMenu }"></div>
+            :class="{ 'translate-y-[9px] rotate-45 bg-black': activeMenu,'!bg-black': underLimit }"></div>
           <div class="ease h-[2px] w-full transform rounded-full bg-black transition duration-300"
-            :class="{ 'bg-black opacity-0': activeMenu }"></div>
+            :class="{ 'bg-black opacity-0': activeMenu, '!bg-black': underLimit }"></div>
           <div class="ease h-[2px] w-full transform rounded-full bg-black transition duration-300"
-            :class="{ '-translate-y-[9px] -rotate-45 bg-black': activeMenu }"></div>
+            :class="{ '-translate-y-[9px] -rotate-45 bg-black': activeMenu, '!bg-black': underLimit }"></div>
         </button>
 
       </div>
     </div>
 
-  </header>
-</template>
+  </header></template>
