@@ -18,6 +18,11 @@
   h4 {
   @apply text-2xl font-serif lg:text-4xl font-bold;
   }
+  h5 {
+  @apply text-2xl font-serif lg:text-3xl font-bold;
+  }
+  p {
+  @apply mb-4;}
 }
   ol,
 ul, li {
@@ -104,4 +109,7 @@ ul, li {
   .top-banner {
   @apply text-3xl font-bold text-darkgreen lg:text-6xl md:text-5xl;
   }
+  .anchor-box {
+  @apply scroll-mt-[100px];
+}
 }

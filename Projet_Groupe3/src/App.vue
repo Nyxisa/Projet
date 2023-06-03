@@ -21,19 +21,7 @@ useHead({
 </template>
 
 <script lang="ts">
-
-// l'adresse du pocket base dépend de l'environnement d'exécution
-// si developpement (npm run run dev) alors l'adresse est http://127.0.0.1:8090
-// sinon si production (npm run build) alors l'adresse est http://193.168.146.158:80
-
-var pocketbase_ip = ''
-if (import.meta.env.MODE === 'production') // si production
-  pocketbase_ip = 'http://193.168.146.158:80'
-else // si developpement
-  pocketbase_ip = 'http://127.0.0.1:8090'
-
-//connexion entre l'applciation et le serveur pocketbase
-const pb = new PocketBase(pocketbase_ip)
+import { pb } from './backend';
 export default {
   methods: {
     //this method allows a new user to sign up the system. Once done, the user receives an email

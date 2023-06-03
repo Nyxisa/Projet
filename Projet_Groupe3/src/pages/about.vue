@@ -13,7 +13,7 @@ import Members from '@/components/Members.vue'
         <img src="/img/about-confiture.webp" alt="pots de confiture"
             class="md:max-w-[300px] h-fit xl:max-w-[600px] lg:max-w-[400px]">
         <div  class="max-w-[900px]">
-            <h2 class="pt-6 text-3xl font-bold lg:text-6xl">À propos de La Cagette Fermière</h2>
+            <h2 class="pt-6 text-3xl">À propos de La Cagette Fermière</h2>
             <p class="font-serif text-2xl font-bold lg:text-3xl text-darkgreen">Vous en avez assez du gaspillage
                 alimentaire&nbsp;?<br>Nous aussi&nbsp;!</p>
             <p class="pt-2 text-sm text-black lg:text-xl">C'est pourquoi nous avons créé La Cagette fermière, une
@@ -29,7 +29,7 @@ import Members from '@/components/Members.vue'
         <img src="/img/about-fraises.webp" alt="plat rempli de fraises"
             class="md:max-w-[300px] h-fit xl:max-w-[600px] lg:max-w-[400px]">
             <div class="max-w-[900px]">
-        <h2 class="pt-6 text-3xl font-bold lg:text-6xl">Notre histoire</h2>
+        <h2 class="pt-6 text-3xl">Notre histoire</h2>
         <p class="font-serif text-2xl font-bold lg:text-3xl text-darkgreen">Étudiantes en But MMI & écolo</p>
         <p class="pt-2 text-sm text-black lg:text-xl">Nous sommes des étudiantes en BUT Métiers du Multimédia et de
             l'internet.
@@ -41,7 +41,7 @@ import Members from '@/components/Members.vue'
             </div>
     </section>
     <section class="px-[7vw] py-16">
-        <h2 class="text-3xl font-bold lg:text-6xl">Les membres de l'équipe</h2>
+        <h2 class="text-3xl">Les membres de l'équipe</h2>
         <Members />
     </section>
 </template>
