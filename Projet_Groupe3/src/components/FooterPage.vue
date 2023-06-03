@@ -54,7 +54,7 @@ import instagram from '@/components/icons/instagram.vue'
 
             <div class="my-6 md:grid md:col-span-2 md:col-start-10">
                 <h4 class="font-serif text-2xl text-center text-white md:text-left">Nous contacter</h4>
-                <p class="footer-link">Téléphone ou mail</p>
+                <RouterLink to="/contact" class="footer-link">Formulaire de contact</RouterLink>
                 <a href="tel:0769408355" class="footer-link">07 69 40 83 55</a>
                 <a href="mailto:lacagettefermiere@gmail.com" class="footer-link">lacagettefermiere@gmail.com</a>
             </div>
