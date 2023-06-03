@@ -3,6 +3,11 @@ import { RouterView } from 'vue-router'
 import PocketBase from 'pocketbase'
 import HeaderPage from './components/HeaderPage.vue'
 import FooterPage from './components/FooterPage.vue'
+import { useHead } from 'unhead';
+
+useHead({
+  title: 'La Cagette Fermière'
+})
 </script>
 
 <template>
