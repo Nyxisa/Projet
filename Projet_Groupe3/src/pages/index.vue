@@ -55,7 +55,7 @@ import CardEtape from '@/components/CardEtape.vue';
         </p>
         <h3 class="text-3xl font-bold text-center text-lightgreen lg:text-5xl">Mais toujours aussi savoureux&nbsp;!</h3>
         <RouterLink to="/"
-            class="px-4 py-2 m-auto my-8 text-center text-white rounded-xl hover:bg-lightgreen hover:text-white active:border-lightgreen active:border-4 bg-orange lg:text-xl w-fit">
+            class="m-auto my-8 btn">
             FAIRE UN DON</RouterLink>
     </div>
 </template>

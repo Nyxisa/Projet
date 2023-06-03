@@ -43,24 +43,24 @@ export default defineComponent({
 <template>
     <div class="m-auto my-8">
         <form @submit.prevent="submitForm" class="">
+            <div>
+                <label for="nom" class="font-serif text-2xl font-bold">Nom</label>
+                <input v-model="nom" type="text" id="nom" placeholder="Entrez votre nom" class="form">
+            </div>
                 <div>
-                    <label for="prenom" class="block">Prénom</label>
+                    <label for="prenom" class="font-serif text-2xl font-bold">Prénom</label>
                     <input v-model="prenom" type="text" id="prenom" placeholder="Entrez votre prénom" class="form">
                 </div>
                 <div>
-                    <label for="nom" class="block">Nom</label>
-                    <input v-model="nom" type="text" id="nom" placeholder="Entrez votre nom" class="form">
-                </div>
-                <div>
-                    <label for="email" class="block">Adresse e-mail</label>
+                    <label for="email" class="font-serif text-2xl font-bold">Adresse e-mail</label>
                     <input v-model="mail" type="email" id="email" placeholder="Entrez votre adresse e-mail" class="form">
                 </div>
                 <div>
-                    <label for="message" class="block">Message</label>
+                    <label for="message" class="font-serif text-2xl font-bold">Message</label>
                     <textarea v-model="message" id="message" placeholder="Entrez votre message ici" rows="4"
                         class="form"></textarea>
                 </div>
-                <button type="submit" class="">Envoyer</button>
+                <button type="submit" class="block mx-auto btn">Envoyer</button>
             </form>
             </div>
 </template>
