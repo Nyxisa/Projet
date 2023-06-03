@@ -96,6 +96,6 @@ ul, li {
   .footer-link {
   @apply block py-1 font-sans text-sm text-center text-white md:text-left;}
   .form {
-  @apply w-full bg-grey text-grey border focus:border-lightgreen rounded-xl py-3 px-4 mb-4 mt-1 focus:outline-none focus:bg-white;
+  @apply w-full bg-grey text-black focus:border-lightgreen focus:border rounded-xl py-3 px-4 mb-4 mt-1 focus:outline-none focus:bg-white;
   }
 }

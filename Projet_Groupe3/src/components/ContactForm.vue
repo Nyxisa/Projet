@@ -7,7 +7,7 @@ export default defineComponent({
         return {
             nom: '',
             prenom: '',
-            mail: '',
+            email: '',
             objet: '',
             message: '',
         };
@@ -19,15 +19,13 @@ export default defineComponent({
                 await pb.collection('contact').create('contact', {
                     nom: this.nom,
                     prenom: this.prenom,
-                    mail: this.mail,
-                    objet: this.objet,
+                    email: this.email,
                     message: this.message,
                 });
                 // Réinitialiser les champs après l'envoi du formulaire
                 this.nom = '';
                 this.prenom = '';
-                this.mail = '';
-                this.objet = '';
+                this.email = '';
                 this.message = '';
                 // Rediriger vers une page de confirmation ou autre
                 this.$router.push('/contact');
@@ -53,7 +51,7 @@ export default defineComponent({
                 </div>
                 <div>
                     <label for="email" class="font-serif text-2xl font-bold">Adresse e-mail</label>
-                    <input v-model="mail" type="email" id="email" placeholder="Entrez votre adresse e-mail" class="form">
+                    <input v-model="email" type="email" id="email" placeholder="Entrez votre adresse e-mail" class="form">
                 </div>
                 <div>
                     <label for="message" class="font-serif text-2xl font-bold">Message</label>
