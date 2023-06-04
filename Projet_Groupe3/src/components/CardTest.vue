@@ -10,22 +10,19 @@ import shoppingBag from './icons/shoppingBag.vue';
 </script>
 
 <template>
-    <div class="flex flex-col items-center overflow-hidden bg-white rounded-xl shadow-1 gap-4 m-[5vw] md:max-w-[250px] max-w-[150px]">
+    <div class="flex flex-col items-center bg-white rounded-xl shadow-1 gap-4 md:max-w-[250px] max-w-[150px] py-4">
         <div
-            class="relative flex flex-col items-center self-stretch justify-start overflow-hidden rounded-t-xl bg-darkgreen">
+            class="relative flex flex-col items-start justify-start px-2 bg-white rounded-xl md:px-4">
+            <img src="/img/legume-pic.webp" alt="" class="object-cover rounded-xl" />
         </div>
-        <div
-            class="relative flex flex-col items-start self-stretch justify-start overflow-hidden bg-white rounded-xl md:px-[2vh] px-2">
-            <img src="/img/legume-pic.webp" alt="" class="self-stretch object-cover rounded-xl" />
-        </div>
-        <div class="relative flex items-center self-stretch justify-between md:px-[3vh] px-3 mb-4">
+        <div class="relative flex items-center self-stretch justify-between px-3 md:px-6">
             <div>
                 <p class="mb-0 text-sm lg:text-base">Concombre</p>
                 <p class="mb-0 text-sm lg:text-base text-darkgrey">
                     1.20 € / pièce
                 </p>
             </div>
-            <shoppingBag class="lg:max-w-[32px] max-w-[24px]" />
+            <shoppingBag class="md:max-w-[32px] max-w-[24px]" />
         </div>
     </div>
 </template>

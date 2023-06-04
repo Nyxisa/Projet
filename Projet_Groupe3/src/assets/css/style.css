@@ -101,6 +101,9 @@ ul, li {
   .btn-cagette-card {
     @apply px-2 py-1;
   }
+  .btn-filter {
+  @apply px-4 py-2 rounded-full bg-grey whitespace-nowrap focus:bg-darkgreen focus:text-white;
+  }
   .footer-link {
   @apply block py-1 font-sans text-sm text-center text-white md:text-left;}
   .form {
