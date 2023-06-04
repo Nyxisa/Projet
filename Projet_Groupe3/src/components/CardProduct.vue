@@ -10,5 +10,6 @@ const urlImg0 = img0 && pb.getFileUrl(props, img0, { thumb: '100x200' })
 <template>
     <nav class="max-w-[250px] hidden md:block">
         <RouterLink class="btn" :to="{ name: 'product-id', params: { id } }">{{ designation }}</RouterLink>
+        <img :src="urlImg0" alt="">
     </nav>
 </template>
