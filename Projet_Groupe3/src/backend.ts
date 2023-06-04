@@ -1,4 +1,5 @@
 import PocketBase from 'pocketbase' ;
+import type { ProductsResponse } from '../src/pocketbase-types';
 
 var pocketbase_ip = ''
 if (import.meta.env.MODE === 'production') // si production
@@ -9,3 +10,8 @@ else // si developpement
 //connexion entre l'application et le serveur pocketbase
 export const pb = new PocketBase(pocketbase_ip)
 
+// Liste de tous les produits 
+export async function allProducts() {
+const allProductsRecords = await pb.collection('products').getFullList<ProductsResponse>();
+return allProductsRecords;
+}

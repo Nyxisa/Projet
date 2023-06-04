@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
-import PocketBase from 'pocketbase'
 import HeaderPage from './components/HeaderPage.vue'
 import FooterPage from './components/FooterPage.vue'
 import { useHead } from 'unhead';
+import { Suspense } from 'vue';
 
 useHead({
   title: 'La Cagette Fermière'
@@ -14,13 +14,15 @@ useHead({
   <HeaderPage />
 
   <main class="pt-[64px] md:pt-[72px] lg:pt-[128px]">
-    <RouterView />
+      <Suspense>
+        <RouterView />
+      </Suspense>
   </main>
 
   <FooterPage />
 </template>
 
-<script lang="ts">
+<!-- <script lang="ts">
 import { pb } from './backend';
 export default {
   methods: {
@@ -41,4 +43,4 @@ export default {
   },
   components: { HeaderPage, FooterPage }
 }
-</script>
+</script> -->
