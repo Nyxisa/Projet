@@ -88,7 +88,7 @@ function closeMenu() {
           </li>
         </div>
 
-        <button class="relative z-10 flex flex-col justify-between w-8 h-5 lg:hidden" @click="activeMenu = !activeMenu">
+        <button class="relative z-10 flex flex-col justify-between w-8 h-5 ml-5 lg:hidden" @click="activeMenu = !activeMenu">
           <div class="ease h-[2px] w-full transform rounded-full bg-black transition duration-300"
             :class="{ 'translate-y-[9px] rotate-45 bg-black': activeMenu, '!bg-black': underLimit }"></div>
           <div class="ease h-[2px] w-full transform rounded-full bg-black transition duration-300"

@@ -78,11 +78,11 @@
     </section>
     <section class="px-[8vw] py-6">
         <h2 class="mb-4">Vos commandes</h2>
-        <p>Vous n’avez rien commandé.</p>
+        <p>Vous n'avez rien commandé.</p>
     </section>
     <section class="px-[8vw] py-6">
         <h2 class="mb-4">Vos abonnement</h2>
-        <p class="mb-10">Vous n’avez encore aucun abonnement aux cagettes.</p>
+        <p class="mb-10">Vous n'avez encore aucun abonnement aux cagettes.</p>
         <RouterLink to="/" class="btn">
             S'abonner</RouterLink>
     </section>
