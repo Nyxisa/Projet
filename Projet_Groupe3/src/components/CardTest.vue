@@ -6,6 +6,12 @@ import shoppingBag from './icons/shoppingBag.vue';
 // const props: ProductsResponse = defineProps<ProductsResponse>()
 // const img0 = props.img
 // const urlImg0 = img0 && pb.getFileUrl(props, img0, { thumb: '100x200' })
+import { ref } from 'vue'
+const activePopUp = ref(false)
+
+function closePopUp() {
+    activePopUp.value = false
+}
 
 </script>
 
@@ -22,7 +28,7 @@ import shoppingBag from './icons/shoppingBag.vue';
                     1.20 € / pièce
                 </p>
             </div>
-            <shoppingBag class="md:max-w-[32px] max-w-[24px]" />
+            <shoppingBag class="md:max-w-[32px] max-w-[24px]" @click="activePopUp = !activePopUp" />
         </div>
     </div>
 </template>

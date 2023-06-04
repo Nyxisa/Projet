@@ -11,12 +11,13 @@ import PopUpPanier from '@/components/PopUpPanier.vue';
 
 </script>
 <template>
-    <div class="relative">
+        <div class="relative">
         <img src="/img/title-pic.webp" alt="épis de blé" class="w-full">
         <div class="absolute top-0 left-0 flex items-center justify-center w-full h-full">
             <h1 class="top-banner">Nos produits</h1>
         </div>
     </div>
+    <!-- Filtres mobiles scroll -->
     <div class="flex py-4 space-x-2 overflow-x-auto lg:hidden">
         <button class="btn-filter">Tout</button>
         <button class="btn-filter">Légumes verts</button>
@@ -28,8 +29,9 @@ import PopUpPanier from '@/components/PopUpPanier.vue';
         <button class="btn-filter">Fruits secs</button>
         <button class="btn-filter">Agrumes</button>
     </div>
+    
+    <!-- Filtres fixes côté gauche desktop -->
     <section class="px-[7vw] flex lg:my-10 lg:gap-10">
-
         <div class="flex-col gap-2 p-10 bg-grey rounded-xl w-[250px] h-min hidden lg:flex flex-shrink-0">
             <RouterLink to="" class="">Tout</RouterLink>
             <h5 class="pt-6 text-darkgreen">Légumes</h5>
