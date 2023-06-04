@@ -68,6 +68,14 @@ ul, li {
   stroke:#4aad52;
 }
 
+.close-svg path {
+  transition: stroke 0.3s ease-in-out;
+}
+
+.close-svg:hover path {
+  stroke:#ee7e2e;
+}
+
 @keyframes custom-bounce {
   0%, 100% {
     transform: translateY(0);

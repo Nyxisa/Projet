@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import CardTest from '@/components/CardTest.vue';
+import PopUpPanier from '@/components/PopUpPanier.vue';
 
 // import CardProduct from '@/components/CardProduct.vue';
 // import { allProducts } from '@/backend'
@@ -53,4 +54,5 @@ import CardTest from '@/components/CardTest.vue';
             <CardTest />
         </div>
     </section>
+    <PopUpPanier/>
 </template>
