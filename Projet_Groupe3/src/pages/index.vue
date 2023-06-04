@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Hero from '@/components/Hero.vue'
-import CagetteCard from '@/components/CagetteCard.vue';
+import CardCagette from '@/components/CardCagette.vue';
 import CounterBox from '@/components/CounterBox.vue';
 import CardEtape from '@/components/CardEtape.vue';
 </script>
@@ -18,11 +18,11 @@ import CardEtape from '@/components/CardEtape.vue';
         </div>
 
         <div class="flex flex-wrap justify-center">
-            <CagetteCard title="Abonnement Light" imgPath="/img/cagette-1.webp"
+            <CardCagette title="Abonnement Light" imgPath="/img/cagette-1.webp"
                 imgAlt="Cagette remplie de fruits et légumes" price="20 €" name1="1kg | Pomme de terre" name2="0.2kg | Ail"
                 name3="0.5kg | Abricots" name4="1kg | Tomates" name5="0.5kg | Fraises" name6="1kg | Pêches"
                 name7="0.2kg | Noix" name8="1kg | Aubergines" name9="0.2kg | Framboises" />
-            <CagetteCard title="Abonnement Giant" imgPath="/img/cagette-2.webp"
+            <CardCagette title="Abonnement Giant" imgPath="/img/cagette-2.webp"
                 imgAlt="Cagette remplie de fruits et légumes" price="40 €" name1="4kg | Pomme de terre"
                 name2="4kg | Artichaut" name3="1kg | Tomates" name4="2kg | Carottes" name5="3kg | Courgettes"
                 name6="2kg | Poires" name7="0.5kg | Oignons" name8="2kg | Pommes" name9="2kg | Concombres" />
@@ -54,8 +54,7 @@ import CardEtape from '@/components/CardEtape.vue';
             <span class="uppercase text-orange">DIFFORMES</span>.
         </p>
         <h3 class="text-3xl font-bold text-center text-lightgreen lg:text-5xl">Mais toujours aussi savoureux&nbsp;!</h3>
-        <RouterLink to="/"
-            class="m-auto my-8 btn">
+        <RouterLink to="/" class="m-auto my-8 btn">
             FAIRE UN DON</RouterLink>
     </div>
 </template>
