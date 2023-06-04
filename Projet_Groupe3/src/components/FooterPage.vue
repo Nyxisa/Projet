@@ -15,8 +15,8 @@ import instagram from '@/components/icons/instagram.vue'
                 <div class="gap-4 lg:flex-col lg:flex">
                     <div>
                         <ul>
-                            <li class="font-sans text-sm text-white">6 rue du château</li>
-                            <li class="font-sans text-sm text-white">Montbéliard 25200</li>
+                            <li class="font-sans text-sm text-white">16 Rue des Fontanelles</li>
+                            <li class="font-sans text-sm text-white">Villeneuve-sur-Lot, 47300</li>
                             <li class="font-sans text-sm text-white">FRANCE</li>
                         </ul>
                     </div>
