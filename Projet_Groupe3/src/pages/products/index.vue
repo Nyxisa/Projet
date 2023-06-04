@@ -2,12 +2,12 @@
 import CardTest from '@/components/CardTest.vue';
 import PopUpPanier from '@/components/PopUpPanier.vue';
 
-// import CardProduct from '@/components/CardProduct.vue';
-// import { allProducts } from '@/backend'
+import CardProduct from '@/components/CardProduct.vue';
+import { allProducts } from '@/backend'
 
-// const ProduitsListe = await allProducts();
+const ProduitsListe = await allProducts();
 
-// console.log(ProduitsListe)
+console.log(ProduitsListe)
 
 </script>
 <template>
@@ -57,4 +57,5 @@ import PopUpPanier from '@/components/PopUpPanier.vue';
         </div>
     </section>
     <PopUpPanier/>
+    <CardProduct v-for="produits in ProduitsListe" :key="produits.id" v-bind="{ ...produits }" />
 </template>
