@@ -4,17 +4,25 @@
 
 @layer base {
     body {
-    @apply font-sans text-base;
+    @apply font-sans text-base lg:text-xl;
   }
   h1 {
-    @apply text-4xl font-serif leading-tight lg:text-6xl;
+    @apply text-5xl font-serif lg:text-7xl font-bold;
   }
   h2 {
-    @apply text-2xl font-serif leading-tight lg:text-4xl;
+    @apply text-4xl font-serif lg:text-6xl font-bold;
   }
   h3 {
-    @apply text-xl font-serif leading-tight;
+    @apply text-3xl font-serif lg:text-5xl font-bold;
   }
+  h4 {
+  @apply text-2xl font-serif lg:text-4xl font-bold;
+  }
+  h5 {
+  @apply text-2xl font-serif lg:text-3xl font-bold;
+  }
+  p {
+  @apply mb-4;}
 }
   ol,
 ul, li {
@@ -60,6 +68,14 @@ ul, li {
   stroke:#4aad52;
 }
 
+.close-svg path {
+  transition: stroke 0.3s ease-in-out;
+}
+
+.close-svg:hover path {
+  stroke:#ee7e2e;
+}
+
 @keyframes custom-bounce {
   0%, 100% {
     transform: translateY(0);
@@ -78,16 +94,33 @@ ul, li {
 
 
 @layer components {
-  /* .grille {
-    @apply px-6 lg:grid lg:grid-cols-principal lg:justify-center lg:gap-12;
-  } */
+  .grille {
+    @apply lg:px-[10vw] lg:grid-cols-principal gap-10 w-full;
+  }
 	.menu-item {
     @apply relative overflow-hidden lg:hover:ease-in-out lg:hover:text-darkgreen lg:text-base lg:before:absolute lg:before:bottom-0 lg:before:left-0 lg:before:h-0.5 lg:before:w-full lg:before:translate-y-5 lg:before:bg-lightgreen lg:before:transition-all lg:before:duration-300 lg:before:ease-in-out lg:hover:before:translate-y-0 text-2xl my-5;
   }
   .menu-link {
     @apply block px-5 lg:py-8;
   }
+  .btn {
+  @apply px-4 py-2 text-white lg:mt-0 rounded-xl hover:bg-lightgreen hover:text-white active:border-lightgreen active:border-4 bg-orange lg:text-xl;
+  }
   .btn-cagette-card {
     @apply px-2 py-1;
   }
+  .btn-filter {
+  @apply px-4 py-2 rounded-full bg-grey whitespace-nowrap focus:bg-darkgreen focus:text-white;
+  }
+  .footer-link {
+  @apply block py-1 font-sans text-sm text-center text-white md:text-left;}
+  .form {
+  @apply w-full bg-grey text-black focus:border-lightgreen focus:border rounded-xl py-3 px-4 mb-4 mt-1 focus:outline-none focus:bg-white;
+  }
+  .top-banner {
+  @apply text-3xl font-bold text-darkgreen lg:text-6xl md:text-5xl;
+  }
+  .anchor-box {
+  @apply scroll-mt-[100px];
+}
 }

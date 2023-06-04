@@ -1,34 +1,29 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
-import PocketBase from 'pocketbase'
 import HeaderPage from './components/HeaderPage.vue'
 import FooterPage from './components/FooterPage.vue'
+import { useHead } from 'unhead';
+import { Suspense } from 'vue';
+
+useHead({
+  title: 'La Cagette Fermière'
+})
 </script>
 
 <template>
   <HeaderPage />
 
   <main class="pt-[64px] md:pt-[72px] lg:pt-[128px]">
-    <RouterView />
+      <Suspense>
+        <RouterView />
+      </Suspense>
   </main>
 
   <FooterPage />
 </template>
 
-<script lang="ts">
-
-// l'adresse du pocket base dépend de l'environnement d'exécution
-// si developpement (npm run run dev) alors l'adresse est http://127.0.0.1:8090
-// sinon si production (npm run build) alors l'adresse est http://193.168.146.158:80
-
-var pocketbase_ip = ''
-if (import.meta.env.MODE === 'production') // si production
-  pocketbase_ip = 'http://193.168.146.158:80'
-else // si developpement
-  pocketbase_ip = 'http://127.0.0.1:8090'
-
-//connexion entre l'applciation et le serveur pocketbase
-const pb = new PocketBase(pocketbase_ip)
+<!-- <script lang="ts">
+import { pb } from './backend';
 export default {
   methods: {
     //this method allows a new user to sign up the system. Once done, the user receives an email
@@ -48,4 +43,4 @@ export default {
   },
   components: { HeaderPage, FooterPage }
 }
-</script>
+</script> -->

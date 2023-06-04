@@ -38,12 +38,12 @@ function containsFruit(name: string): boolean {
             <div v-for="name in [name1, name2, name3, name4, name5, name6, name7, name8, name9]" :key="name"
                 class="relative flex items-center justify-center m-1 rounded-lg"
                 :class="{ 'bg-darkgreen': !containsFruit(name), 'bg-orange': containsFruit(name) }">
-                <p class="text-sm text-center text-white lg:text-base btn-cagette-card">{{ name }}</p>
+                <p class="mb-0 text-sm text-center text-white lg:text-base btn-cagette-card">{{ name }}</p>
             </div>
         </div>
 
         <div class="relative flex items-center self-stretch justify-between px-[3vh] mb-4">
-            <p class="font-serif text-2xl font-bold text-center text-black lg:text-3xl">
+            <p class="mb-0 font-serif text-2xl font-bold text-center text-black lg:text-3xl">
                 {{ price }}
             </p>
             <shoppingBag/>
