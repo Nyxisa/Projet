@@ -75,22 +75,22 @@ function closeMenu() {
       <div class="flex items-center">
         <div class="md:flex">
           <li>
-            <a class="hidden rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-indigo-600 transition hover:fill-lightgreen md:block"
-              href="/">
+            <RouterLink to="/compte"
+              class="hidden rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-indigo-600 transition hover:fill-lightgreen md:block">
               <user />
-            </a>
+            </RouterLink>
           </li>
           <li>
-            <a class="hidden rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-indigo-600 transition hover:text-indigo-600/75 md:block"
-              href="/">
+            <RouterLink to="/panier"
+              class="hidden rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-indigo-600 transition hover:text-indigo-600/75 md:block">
               <shoppingBag />
-            </a>
+            </RouterLink>
           </li>
         </div>
 
-        <button class="relative z-10 flex flex-col justify-between w-8 h-5 lg:hidden" @click="activeMenu = !activeMenu">
+        <button class="relative z-10 flex flex-col justify-between w-8 h-5 ml-5 lg:hidden" @click="activeMenu = !activeMenu">
           <div class="ease h-[2px] w-full transform rounded-full bg-black transition duration-300"
-            :class="{ 'translate-y-[9px] rotate-45 bg-black': activeMenu,'!bg-black': underLimit }"></div>
+            :class="{ 'translate-y-[9px] rotate-45 bg-black': activeMenu, '!bg-black': underLimit }"></div>
           <div class="ease h-[2px] w-full transform rounded-full bg-black transition duration-300"
             :class="{ 'bg-black opacity-0': activeMenu, '!bg-black': underLimit }"></div>
           <div class="ease h-[2px] w-full transform rounded-full bg-black transition duration-300"
