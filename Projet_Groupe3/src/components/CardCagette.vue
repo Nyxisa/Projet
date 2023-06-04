@@ -43,7 +43,7 @@ function containsFruit(name: string): boolean {
         </div>
 
         <div class="relative flex items-center self-stretch justify-between px-[3vh] mb-4">
-            <p class="font-serif text-2xl font-bold text-center text-black lg:text-3xl">
+            <p class="mb-0 font-serif text-2xl font-bold text-center text-black lg:text-3xl">
                 {{ price }}
             </p>
             <shoppingBag/>

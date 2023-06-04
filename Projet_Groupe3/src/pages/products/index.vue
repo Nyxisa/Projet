@@ -1,10 +1,12 @@
 <script setup lang="ts">
-import CardProduct from '@/components/CardProduct.vue';
-import { allProducts } from '@/backend'
+import CardTest from '@/components/CardTest.vue';
 
-const ProduitsListe = await allProducts();
+// import CardProduct from '@/components/CardProduct.vue';
+// import { allProducts } from '@/backend'
 
-console.log(ProduitsListe)
+// const ProduitsListe = await allProducts();
+
+// console.log(ProduitsListe)
 
 </script>
 <template>
@@ -15,6 +17,8 @@ console.log(ProduitsListe)
         </div>
     </div>
     <section class="px-[7vw] py-16">
-        <CardProduct v-for="produits in ProduitsListe" :key="produits.id" v-bind="{ ...produits }" />
+    <CardTest/>
+        
+        <!-- <CardProduct v-for="produits in ProduitsListe" :key="produits.id" v-bind="{ ...produits }" /> -->
     </section>
 </template>
