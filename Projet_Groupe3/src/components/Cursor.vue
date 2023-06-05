@@ -38,7 +38,7 @@ export default defineComponent({
         <div class="slider-component">
             <div class="slidecontainer">
                 <input v-model="currentValue" type="range" :min="min" :max="max"
-                    class="w-[500px] [&::-webkit-slider-runnable-track]:h-4 appearance-none [&::-webkit-slider-runnable-track]:rounded-full [&::-webkit-slider-runnable-track]:bg-lightgreen [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-[40px] [&::-webkit-slider-thumb]:w-[40px] [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-brown [&::-webkit-slider-thumb]:-translate-y-2"
+                    class="w-full [&::-webkit-slider-runnable-track]:h-4 appearance-none [&::-webkit-slider-runnable-track]:rounded-full [&::-webkit-slider-runnable-track]:bg-lightgreen [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-[40px] [&::-webkit-slider-thumb]:w-[40px] [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-brown [&::-webkit-slider-thumb]:-translate-y-3"
                     @input="onInput">
             </div>
         </div>
