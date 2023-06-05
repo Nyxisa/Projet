@@ -14,10 +14,10 @@ import CardProductor from '@/components/CardProductor.vue';
     </div>
     <div class="flex w-full">
         <RouterLink to="/"
-            class="w-1/2 px-4 py-2 text-center text-white uppercase bg-lightgreen lg:mt-0 active:border-lightgreen hover:drop-shadow-lg active:border-4 lg:text-xl animate-pulse">
+            class="btn-don don">
             Donner</RouterLink>
         <RouterLink to="/"
-            class="w-1/2 px-4 py-2 text-center text-white uppercase bg-orange lg:mt-0 active:border-orange hover:drop-shadow-lg active:border-4 lg:text-xl">
+            class="bg-orange active:border-orange btn-don don">
             Sauver</RouterLink>
     </div>
     <div class="flex flex-col justify-center gap-4 mx-4 my-8">
@@ -42,8 +42,7 @@ import CardProductor from '@/components/CardProductor.vue';
         <h3 class="mb-2 text-darkgreen">Vous êtes un particulier&nbsp;?</h3>
         <div class="items-start gap-[4vw] lg:flex">
             <div>
-                <p class="pt-2">Découvrez les étapes à suivre pour faire des dons de produits grâce à La Cagette Fermière.
-                </p>
+                <p class="pt-2">Découvrez les étapes à suivre pour faire des dons de produits grâce à La Cagette Fermière.</p>
                 <p>Chez La Cagette Fermière, la solidarité et le partage sont des valeurs fortes.</p>
                 <p>C'est pourquoi faire un don vous permet de bénéficiez de 20% de réduction sur votre panier lors de votre
                     première
@@ -53,12 +52,12 @@ import CardProductor from '@/components/CardProductor.vue';
                 </p>
                 <RouterLink to="/" class="block mx-auto my-8 btn w-fit lg:mx-0">Je veux donner</RouterLink>
             </div>
-            <div class="flex py-6 space-x-2 overflow-x-auto lg:gap-12 lg:py-0 lg:w-[30vw] lg:overflow-visible">
-                <CardDon class="max-w-[250px] w-full" />
-                <CardDon class="lg:hidden" />
-                <CardDon class="lg:hidden" />
-            </div>
-
+                <div class="flex py-6 space-x-2 overflow-x-auto lg:gap-12 lg:py-0 lg:w-[30vw] lg:overflow-visible">
+                    <CardDon class="max-w-[250px] w-full" />
+                    <CardDon class="lg:hidden" />
+                    <CardDon class="lg:hidden" />
+                </div>
+            
         </div>
     </section>
     <section class="px-[8vw] py-12">
