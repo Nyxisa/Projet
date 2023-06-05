@@ -1,38 +1,18 @@
-<template>
-    <div class="max-w-md mx-auto">
-        <!-- Titre de l'annonce -->
-        <input type="text" v-model="titre" class="p-2 mb-4 border border-gray-300" placeholder="Titre de l'annonce">
-
-        <!-- Description de l'annonce -->
-        <textarea v-model="description" class="p-2 mb-4 border border-gray-300"
-            placeholder="Description de l'annonce"></textarea>
-
-        <!-- Catégorie de l'annonce -->
-        <select v-model="categorie" class="p-2 mb-4 border border-gray-300">
-            <option value="">Sélectionnez une catégorie</option>
-            <!-- Autres options de catégorie -->
-        </select>
-
-        <!-- Prix de l'annonce -->
-        <input type="number" v-model.number="prix" class="p-2 mb-4 border border-gray-300" placeholder="Prix de l'annonce">
-
-        <!-- Autres champs de l'annonce -->
-
-        <!-- Bouton de soumission -->
-        <button @click="creerAnnonce" class="px-4 py-2 text-white bg-blue-500 rounded">Créer l'annonce</button>
-    </div>
-</template>
-
 <script lang="ts">
 import { defineComponent } from 'vue';
+
+import CardPhoto from '@/components/CardPhoto.vue';
+import localisation from '@/components/icons/localisation.vue';
+import type localisationVue from '@/components/icons/localisation.vue';
 
 export default defineComponent({
     data() {
         return {
-            titre: '' as string,
-            description: '' as string,
-            categorie: '' as string,
-            prix: null as number | null,
+            titre: "" as string,
+            description: "" as string,
+            categorie: "" as string,
+            adresse: "" as string,
+            photo: null as File | null,
             // Autres données de l'annonce
         };
     },
@@ -41,9 +21,55 @@ export default defineComponent({
             // Logique de création d'annonce
         },
     },
+    components: { localisation, CardPhoto }
 });
 </script>
 
-<style>
-/* Styles supplémentaires pour personnaliser le formulaire */
-</style>
+<template>
+    <div class="flex flex-col w-4/5 gap-4 mx-auto my-8 lg:w-2/5">
+        <h3 class="text-center">Vous allez faire des heureux !</h3>
+        <label class="font-serif text-3xl font-bold text-center">Type</label>
+        <select v-model="categorie" class="form">
+            <option disabled value="">Sélectionnez une catégorie</option>
+            <option>Fruit</option>
+            <option>Légume</option>
+        </select>
+        <div>
+            <label for="titre" class="font-serif text-3xl font-bold">Titre de l'annonce</label>
+            <input type="text" v-model="titre" class="mb-0 form"
+                placeholder="Ex: pommes, poivrons rouges, lot de légumes...">
+            <p class="mr-0 text-base text-right">Max 30 caractères</p>
+        </div>
+
+        <div>
+            <label for="description" class="font-serif text-3xl font-bold">Description</label>
+            <textarea v-model="description" class="mb-0 form"
+                placeholder="Ex: Cerises à venir cueillir sur le secteur de Pujols. Disponible cette semaine à partir de 16h."
+                rows="4"></textarea>
+            <p class="mr-0 text-base text-right">Max 200 caractères</p>
+        </div>
+        <label for="file" class="font-serif text-3xl font-bold text-center">Photo(s)</label>
+
+        <div class="flex justify-center w-full gap-[4vw] mb-6">
+            <CardPhoto />
+            <CardPhoto />
+            <CardPhoto class="hidden md:block" />
+        </div>
+        <label class="font-serif text-3xl font-bold">Adresse</label>
+        <input type="adresse" v-model="adresse" class="form" placeholder="Ex : 156 Rte de Cancon, 47440 Pailloles">
+
+        <h5 class="mb-2 text-center">Ou me localiser</h5>
+        <button @click="" class="block p-4 mx-auto mb-16 rounded-lg bg-darkgreen active:shadow-1 active:-translate-y-1">
+            <localisation />
+        </button>
+
+
+
+
+        <button @click="creerAnnonce" class="block mx-auto rounded-full btn">Créer l'annonce</button>
+    </div>
+</template>
+
+
+
+
