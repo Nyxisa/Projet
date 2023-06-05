@@ -104,7 +104,7 @@ ul, li {
     @apply block px-5 lg:py-8;
   }
   .btn {
-  @apply px-4 py-2 text-white lg:mt-0 rounded-xl hover:bg-lightgreen hover:text-white active:border-lightgreen active:border-4 bg-orange lg:text-xl;
+  @apply px-4 py-2 text-white lg:mt-0 rounded-xl hover:bg-lightgreen hover:text-white active:border-lightgreen active:border-4 bg-orange lg:text-xl uppercase;
   }
   .btn-cagette-card {
     @apply px-2 py-1;
