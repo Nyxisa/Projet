@@ -10,6 +10,7 @@ export default defineComponent({
             email: '',
             objet: '',
             message: '',
+            checked: false,
         };
     },
     methods: {
@@ -21,12 +22,14 @@ export default defineComponent({
                     prenom: this.prenom,
                     email: this.email,
                     message: this.message,
+                    checked: true,
                 });
                 // Réinitialiser les champs après l'envoi du formulaire
                 this.nom = '';
                 this.prenom = '';
                 this.email = '';
                 this.message = '';
+                this.checked = false;
                 // Rediriger vers une page de confirmation ou autre
                 this.$router.push('/contact');
             } catch (error) {
@@ -45,21 +48,24 @@ export default defineComponent({
                 <label for="nom" class="font-serif text-2xl font-bold">Nom</label>
                 <input v-model="nom" type="text" id="nom" placeholder="Entrez votre nom" class="form">
             </div>
-                <div>
-                    <label for="prenom" class="font-serif text-2xl font-bold">Prénom</label>
-                    <input v-model="prenom" type="text" id="prenom" placeholder="Entrez votre prénom" class="form">
-                </div>
-                <div>
-                    <label for="email" class="font-serif text-2xl font-bold">Adresse e-mail</label>
-                    <input v-model="email" type="email" id="email" placeholder="Entrez votre adresse e-mail" class="form">
-                </div>
-                <div>
-                    <label for="message" class="font-serif text-2xl font-bold">Message</label>
-                    <textarea v-model="message" id="message" placeholder="Entrez votre message ici" rows="4"
-                        class="form"></textarea>
-                </div>
-                <button type="submit" class="block mx-auto btn">Envoyer</button>
-            </form>
+            <div>
+                <label for="prenom" class="font-serif text-2xl font-bold">Prénom</label>
+                <input v-model="prenom" type="text" id="prenom" placeholder="Entrez votre prénom" class="form">
             </div>
+            <div>
+                <label for="email" class="font-serif text-2xl font-bold">Adresse e-mail</label>
+                <input v-model="email" type="email" id="email" placeholder="Entrez votre adresse e-mail" class="form">
+            </div>
+            <div>
+                <label for="message" class="font-serif text-2xl font-bold">Message</label>
+                <textarea v-model="message" id="message" placeholder="Entrez votre message ici" rows="4"
+                    class="form"></textarea>
+            </div>
+            <input type="checkbox" id="checkbox" v-model="checked">
+            <label for="checkbox" class="px-4 text-base">J'accepte que les données renseignées ci-dessus soient stockées et traitées par La
+                Cagette Fermière.*</label>
+            <button type="submit" class="block mx-auto mt-6 btn">Envoyer</button>
+        </form>
+    </div>
 </template>
 
