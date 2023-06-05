@@ -20,7 +20,7 @@ import CardProductor from '@/components/CardProductor.vue';
             class="bg-orange active:border-orange btn-don don">
             Sauver</RouterLink>
     </div>
-    <div class="flex flex-col justify-center gap-4 mx-4 my-8">
+    <div class="flex flex-col justify-center gap-4 mx-4 my-10">
         <img src="/img/illu-eco.webp" alt="panier de légumes" class="max-w-[54px] m-auto">
         <h2 class="text-4xl font-bold text-center lg:text-6xl">Sauver des produits&nbsp;?! Comment ça marche&nbsp;?</h2>
         <img src="/img/deco-poire-banane.webp" alt="panier de légumes" class="m-auto left-[5vw] lg:absolute z-[-1]">
