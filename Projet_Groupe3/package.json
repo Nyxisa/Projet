@@ -13,6 +13,7 @@
     "typegen": "pocketbase-typegen --db ./pocketbase/pb_data/data.db --out ./src/pocketbase-types.ts"
   },
   "dependencies": {
+    "@vueform/slider": "^2.1.7",
     "@vueuse/core": "^10.1.2",
     "jquery": "^3.7.0",
     "pocketbase": "^0.15.0",
