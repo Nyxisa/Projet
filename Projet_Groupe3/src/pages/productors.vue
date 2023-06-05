@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import CardProductor from '@/components/CardProductor.vue';
+
 
 </script>
 
@@ -11,13 +13,12 @@
     </div>
     <div class="px-[8vw] py-6">
         <h2 class="mb-4 leading-tight">Agriculteurs, Fermiers... Ils sont les producteurs de la Cagette Fermière</h2>
-            
-            <img class="mx-auto my-8 lg:m-0 lg:h-[100px] xl:h-[150px]" src="/img/partenaire-1.webp"
-                alt="Lot et Garonne, le département coeur du Sud-Ouest">
-            <img class="mx-auto my-8 lg:m-0 lg:h-[100px] xl:h-[150px]" src="/img/partenaire-2.webp"
-                alt="Tomates Concombres, l'association nationale de producteurs">
-            <img class="mx-auto my-8 lg:m-0 lg:h-[100px] xl:h-[150px]" src="/img/partenaire-3.webp"
-                alt="Union nationale du commerce de gros de fruits et légumes">
-        </div>
+
+        <section class="flex flex-wrap justify-around gap-4 md:gap-8">
+            <CardProductor />
+            <CardProductor />
+            <CardProductor />
+            <CardProductor />
+        </section>
     </div>
 </template>
