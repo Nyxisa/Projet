@@ -14,7 +14,7 @@ import linkedin from '@/components/icons/linkedin.vue';
                     </a>
                 </div>
             </div>
-            <img src="/img/lisa2.webp" alt="Image" class="absolute top-0 right-0 w-56">
+            <img src="/img/lisa.webp" alt="Image" class="absolute top-0 right-0 w-56">
         </div>
 
         <div class="relative flex flex-col items-center md:w-[450px]">
@@ -28,7 +28,7 @@ import linkedin from '@/components/icons/linkedin.vue';
                     </a>
                 </div>
             </div>
-            <img src="/img/julia2.webp" alt="Image" class="absolute top-0 left-0 w-56">
+            <img src="/img/julia.webp" alt="Image" class="absolute top-0 left-0 w-56">
         </div>
 
         <div class="relative flex flex-col items-center md:w-[450px]">
@@ -42,7 +42,7 @@ import linkedin from '@/components/icons/linkedin.vue';
                     </a>
                 </div>
             </div>
-            <img src="/img/jael2.webp" alt="Image" class="absolute top-0 right-0 w-56">
+            <img src="/img/jael.webp" alt="Image" class="absolute top-0 right-0 w-56">
         </div>
     </div>
 </template>
