@@ -4,11 +4,13 @@ import close from './icons/close.vue';
 
 import { ref } from 'vue'
 
-const activePopUp = ref(false)
+const activePopUp = ref(true)
 
 function closePopUp() {
     activePopUp.value = false
 }
+
+// export { activePopUp, closePopUp }
 
 // import { pb } from '@/backend'
 // import type { ProductsResponse } from '@/pocketbase-types'
@@ -20,11 +22,11 @@ function closePopUp() {
 
 <template>
     <!-- Version Desktop -->
-    <div class="fixed transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+    <div class="fixed invisible transition-opacity duration-300 ease-in-out transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" :class="{ '!visible': activePopUp }" v-scroll-lock="activePopUp">
         <div class="md:w-[600px] hidden md:block border-grey border-2 rounded-2xl">
             <div class="flex items-center justify-between px-6 py-2 rounded-t-xl bg-grey">
                 <h5>Votre panier comporte 0 articles</h5>
-                <close />
+                <button  @click="closePopUp"><close/></button>
             </div>
             <div class="bg-white rounded-b-xl">
                 <div class="flex gap-4 p-10">
@@ -56,12 +58,11 @@ function closePopUp() {
         </div>
     </div>
     <!-- Version Mobile -->
-    <div class="fixed transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
-        <div class="w-[300px] my-10 md:hidden border-grey border-2 rounded-2xl invisible"
-            :class="{ '!visible opacity-100': activePopUp }" v-scroll-lock="activePopUp">
+    <div class="fixed invisible transition-opacity duration-300 ease-in-out transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" :class="{ '!visible': activePopUp }" v-scroll-lock="activePopUp">
+        <div class="w-[300px] my-10 md:hidden border-grey border-2 rounded-2xl">
             <div class="flex items-center justify-between px-6 py-2 rounded-t-xl bg-grey">
                 <h5 class="text-center">Votre panier comporte<br>0 articles</h5>
-                <close @click="closePopUp" />
+                 <button  @click="closePopUp"><close/></button>
             </div>
             <div class="bg-white rounded-b-xl">
                 <div class="py-6">

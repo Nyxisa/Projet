@@ -3,7 +3,7 @@
 
 <template>
     <div class="relative">
-        <img src="/img/title-pic.webp" alt="épis de blé" class="w-full">
+        <img src="/img/title-pic.webp" alt="Fruits et légumes décoratifs" class="w-full">
         <div class="absolute top-0 left-0 flex items-center justify-center w-full h-full">
             <h1 class="top-banner">Mon panier</h1>
         </div>
@@ -40,8 +40,10 @@
     </div>
 
     <section class="flex flex-col lg:hidden px-[8vw]">
-        <div class="w-full h-[400px] bg-grey flex flex-col justify-evenly rounded-xl"><p class="mb-0 text-center">Ooups... Votre panier est vide</p>
-        <RouterLink class="mx-auto my-8 btn w-fit" to="">Faire mes courses</RouterLink></div>
+        <div class="w-full h-[400px] bg-grey flex flex-col justify-evenly rounded-xl">
+            <p class="mb-0 text-center">Ooups... Votre panier est vide</p>
+            <RouterLink class="mx-auto my-8 btn w-fit" to="">Faire mes courses</RouterLink>
+        </div>
         <div class="flex items-start justify-between my-6">
             <p class="p-2 mb-0 bg-grey rounded-xl w-fit">0,00€</p>
             <RouterLink class="btn w-fit" to="">Valider mon panier</RouterLink>

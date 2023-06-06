@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import CardTest from '@/components/CardTest.vue';
 import PopUpPanier from '@/components/PopUpPanier.vue';
-
 import CardProduct from '@/components/CardProduct.vue';
+
 import { allProducts } from '@/backend'
 
 const ProduitsListe = await allProducts();
@@ -11,8 +11,8 @@ console.log(ProduitsListe)
 
 </script>
 <template>
-        <div class="relative">
-        <img src="/img/title-pic.webp" alt="épis de blé" class="w-full">
+    <div class="relative">
+        <img src="/img/title-pic.webp" alt="Fruits et légumes décoratifs" class="w-full">
         <div class="absolute top-0 left-0 flex items-center justify-center w-full h-full">
             <h1 class="top-banner">Nos produits</h1>
         </div>
@@ -29,7 +29,7 @@ console.log(ProduitsListe)
         <button class="btn-filter">Fruits secs</button>
         <button class="btn-filter">Agrumes</button>
     </div>
-    
+
     <!-- Filtres fixes côté gauche desktop -->
     <section class="px-[7vw] flex lg:my-10 lg:gap-10">
         <div class="flex-col gap-2 p-10 bg-grey rounded-xl w-[250px] h-min hidden lg:flex flex-shrink-0">
@@ -47,15 +47,9 @@ console.log(ProduitsListe)
         </div>
 
         <div class="flex flex-wrap justify-center gap-4 py-4 lg:gap-16">
-            <CardTest />
-            <CardTest />
-            <CardTest />
-            <CardTest />
-            <CardTest />
-            <CardTest />
-            <CardTest />
+               <CardProduct v-for="produits in ProduitsListe" :key="produits.id" v-bind="{ ...produits }" />
         </div>
     </section>
     <PopUpPanier/>
-    <CardProduct v-for="produits in ProduitsListe" :key="produits.id" v-bind="{ ...produits }" />
+  
 </template>

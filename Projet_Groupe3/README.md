@@ -1,46 +1,23 @@
-# Projet_Groupe3
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/NKYtSZ_c)
+- Nom: Cingolani
+- Prénom: Lisa
+- URL du site: [la-cagette-fermiere.lisa-cingolani.fr](https://la-cagette-fermiere.lisa-cingolani.fr)
+- Url de la maquette : [Maquette FIGMA Projet](https://www.figma.com/file/B5rfFErQJdFNLuI8XlsGCn/rendu_projet_s2_jael_amemoutou_lisa_cingolani_julia_duflot?type=design&node-id=1%3A3&t=dkbWY7zFDKneP1ZC-1)
 
-This template should help get you started developing with Vue 3 in Vite.
 
-## Recommended IDE Setup
+- [ ] [backend](/pocketbase/backend.mjs)
+- [ ] [test backend](/pocketbase/testback.mjs)
+- [ ] [MCD](/pocketbase/MCD_Projet.pdf)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
-## Type Support for `.vue` Imports in TS
+Renseigner les informations suivantes :
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+- [ ] Donnez l'adresse IP de votre VPS :  193.168.146.158
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+- [ ] Donnez le login et le mot de passe admin du compte pocketbase : 
 
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+- [ ] Donnez l'URL du backend `http://.../_/` (IP ou dommaine) : http:///_/
 
-## Customize configuration
+- [ ] Donnez l'URL du frontend `http://.../` (IP ou domaine) : http://
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+- [ ] Donnez l'URL HTTP**S** du frontend `https://foo.bar/` (nom de dommaine) : https://

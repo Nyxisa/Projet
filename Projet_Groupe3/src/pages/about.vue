@@ -4,7 +4,7 @@ import Members from '@/components/Members.vue'
 
 <template>
     <div class="relative">
-        <img src="/img/title-pic.webp" alt="épis de blé" class="w-full">
+        <img src="/img/title-pic.webp" alt="Fruits et légumes décoratifs" class="w-full">
         <div class="absolute top-0 left-0 flex items-center justify-center w-full h-full">
             <h1 class="top-banner">Qui sommes-nous&nbsp;?</h1>
         </div>
@@ -12,7 +12,7 @@ import Members from '@/components/Members.vue'
     <section class="px-[7vw] py-16 md:flex-row-reverse md:flex gap-8 items-center justify-center">
         <img src="/img/about-confiture.webp" alt="pots de confiture"
             class="md:max-w-[300px] h-fit xl:max-w-[600px] lg:max-w-[400px]">
-        <div  class="max-w-[900px]">
+        <div class="max-w-[900px]">
             <h2 class="pt-6 text-3xl">À propos de La Cagette Fermière</h2>
             <p class="font-serif text-2xl font-bold lg:text-3xl text-darkgreen">Vous en avez assez du gaspillage
                 alimentaire&nbsp;?<br>Nous aussi&nbsp;!</p>
@@ -28,17 +28,17 @@ import Members from '@/components/Members.vue'
     <section class="px-[7vw] py-16 md:flex-row md:flex items-center gap-8 justify-center">
         <img src="/img/about-fraises.webp" alt="plat rempli de fraises"
             class="md:max-w-[300px] h-fit xl:max-w-[600px] lg:max-w-[400px]">
-            <div class="max-w-[900px]">
-        <h2 class="pt-6 text-3xl">Notre histoire</h2>
-        <p class="font-serif text-2xl font-bold lg:text-3xl text-darkgreen">Étudiantes en But MMI & écolo</p>
-        <p class="pt-2 text-sm text-black lg:text-xl">Nous sommes des étudiantes en BUT Métiers du Multimédia et de
-            l'internet.
-            L'écologie et la lutte contre le gaspillage sont des valeurs qui nous tiennent à cœur.</p>
-        <p class="pt-2 text-sm text-black lg:text-xl">C'est pourquoi, dans le cadre d'un exercice pédagogique, nous
-            avons pris l'initiative de mettre en place un site afin de limiter le gaspillage alimentaire.<br>
-            Et ce, tout en offrant la possibilité aux habitants du Lot et Garonne d'économiser sur les fruits, les
-            légumes et les produits du jardin.</p>
-            </div>
+        <div class="max-w-[900px]">
+            <h2 class="pt-6 text-3xl">Notre histoire</h2>
+            <p class="font-serif text-2xl font-bold lg:text-3xl text-darkgreen">Étudiantes en But MMI & écolo</p>
+            <p class="pt-2 text-sm text-black lg:text-xl">Nous sommes des étudiantes en BUT Métiers du Multimédia et de
+                l'internet.
+                L'écologie et la lutte contre le gaspillage sont des valeurs qui nous tiennent à cœur.</p>
+            <p class="pt-2 text-sm text-black lg:text-xl">C'est pourquoi, dans le cadre d'un exercice pédagogique, nous
+                avons pris l'initiative de mettre en place un site afin de limiter le gaspillage alimentaire.<br>
+                Et ce, tout en offrant la possibilité aux habitants du Lot et Garonne d'économiser sur les fruits, les
+                légumes et les produits du jardin.</p>
+        </div>
     </section>
     <section class="px-[7vw] py-16">
         <h2 class="text-3xl">Les membres de l'équipe</h2>
