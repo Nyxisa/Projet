@@ -22,7 +22,7 @@ const urlImg0 = img0 && pb.getFileUrl(props, img0, { thumb: '100x200' })
 
                 <div class="px-[1vh] relative flex items-center self-stretch justify-between my-2">
                     <p class="mb-0 overflow-auto text-base break-words lg:text-2xl line-clamp-1">{{ title_donation }}</p>
-                    <Message class="w-[36px]" />
+                    <Message class="w-[36px] min-w-[36px]" />
                 </div>
                 <div class="pb-2 px-[1vh]">
                     <p class="overflow-hidden text-sm text-left break-words lg:text-base line-clamp-2">{{ description }}</p>
