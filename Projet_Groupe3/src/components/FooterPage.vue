@@ -7,7 +7,7 @@ import instagram from '@/components/icons/instagram.vue'
 
 <template>
     <footer>
-        <div class="justify-center gap-8 py-8 md:px-8 lg:grille bg-brown md:flex">
+        <div class="justify-center gap-8 py-8 md:px-8 lg:grille bg-brown md:flex lg:grid">
             <div class="flex flex-row justify-center col-span-3 col-start-1 gap-4 md:flex-col md:gap-0">
                 <RouterLink to="/" class="block">
                     <Logo />

@@ -35,12 +35,16 @@ console.log(ProduitsListe)
     <section class="px-[7vw] flex lg:my-10 lg:gap-10">
         <div class="flex-col gap-2 p-10 bg-grey rounded-xl w-[250px] h-min hidden lg:flex flex-shrink-0">
             <RouterLink to="/products">Tout</RouterLink>
-            <RouterLink to="/products/legumes"><h5 class="pt-6 text-darkgreen">Légumes</h5></RouterLink>
+            <RouterLink to="/products/legumes">
+                <h5 class="pt-6 text-darkgreen">Légumes</h5>
+            </RouterLink>
             <RouterLink to="">Légumes verts</RouterLink>
             <RouterLink to="">Légumes racines</RouterLink>
             <RouterLink to="">Légumes feuilles</RouterLink>
             <RouterLink to="">Légumes bulbes</RouterLink>
-            <RouterLink to="/products/fruits"><h5 class="pt-6 text-darkgreen">Fruits</h5></RouterLink>
+            <RouterLink to="/products/fruits">
+                <h5 class="pt-6 text-darkgreen">Fruits</h5>
+            </RouterLink>
             <RouterLink to="">Fruits à pépins</RouterLink>
             <RouterLink to="">Fruits à noyau</RouterLink>
             <RouterLink to="">Fruits secs</RouterLink>
@@ -48,10 +52,8 @@ console.log(ProduitsListe)
         </div>
 
         <div class="flex flex-wrap justify-center gap-4 py-4 lg:gap-16">
-               <CardProduct v-for="produits in ProduitsListe" :key="produits.id" v-bind="{ ...produits }" />
-            
+            <CardProduct v-for="produits in ProduitsListe" :key="produits.id" v-bind="{ ...produits }" />
         </div>
-    </section>
-    <PopUpPanier/>
-  
+</section>
+<PopUpPanier />
 </template>

@@ -55,4 +55,5 @@ console.log(FruitsListe)
               <CardProduct v-for="produits in FruitsListe" :key="produits.id" v-bind="{ ...produits }" />
         </div>
     </section>
-<PopUpPanier /></template>
+<PopUpPanier />
+</template>

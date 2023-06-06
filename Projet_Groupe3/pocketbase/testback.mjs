@@ -1,4 +1,4 @@
-import { allProducts, allProductors, allDons, allDonsSorted, allFavProductors, allFruits, allLegumes } from './backend.mjs'
+import { allProducts, allProductors, allDons, allDonsSorted, allFavProductors, allFruits, allLegumes, donById } from './backend.mjs'
 
 console.log("-------------------------------------Liste de tous les produits---------------------------------------------------")
 
@@ -60,6 +60,16 @@ console.log("-------------------------------------Liste des produits catégorie 
 try {
 const allLegumesRecords = await allLegumes();
 console.log(JSON.stringify(allLegumesRecords, null, 2));
+} catch (e) {
+console.error(e);
+}
+
+
+console.log("-------------------------------------Infos sur un don en donnant son id ------------------------------------------")
+
+try {
+const donByIdRecords = await donById('2hygzu63dmdqmr7');
+console.log(JSON.stringify(donByIdRecords, null, 2));
 } catch (e) {
 console.error(e);
 }

@@ -45,10 +45,10 @@ import CardEtape from '@/components/CardEtape.vue';
     <div class="flex flex-col justify-center gap-4 mx-4 my-8">
         <img src="/img/illu-eco.webp" alt="panier de légumes" class="max-w-[54px] m-auto">
         <h2 class="text-4xl font-bold text-center lg:text-6xl">Sauver des produits&nbsp;?! <br>Comment ça marche&nbsp;?</h2>
-        <img src="/img/deco-poire-banane.webp" alt="panier de légumes" class="m-auto left-[5vw] lg:absolute z-[-1]">
+        <img src="/img/deco-poire-banane.webp" alt="poire et banane" class="m-auto left-[5vw] lg:absolute z-[-1]">
         <p class="text-center lg:text-xl">Vous avez un potager, des invendus, des produits en trop&nbsp;? <br>
             Donnez-les pour bénéficier de nombreuses réductions&nbsp;!</p>
-        <img src="/img/deco-avocat-poivron.webp" alt="panier de légumes" class="right-[5vw] m-auto lg:absolute z-[-1]">
+        <img src="/img/deco-avocat-poivron.webp" alt="avocat et poivron" class="right-[5vw] m-auto lg:absolute z-[-1]">
         <p class="text-center lg:text-xl">Nous récupérons les produits trop <span
                 class="uppercase text-orange">PETITS</span>, trop <span class="uppercase text-orange">TORDUS</span>, trop
             <span class="uppercase text-orange">DIFFORMES</span>.

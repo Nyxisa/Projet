@@ -66,7 +66,7 @@ function closePopUp() {
             </div>
             <div class="bg-white rounded-b-xl">
                 <div class="py-6">
-                    <img src="/img/legume-pic.webp" alt="" class="object-cover rounded-xl h-[150px] w-[200px] mx-auto" />
+                    <img src="/img/legume-pic.webp" alt="produit" class="object-cover rounded-xl h-[150px] w-[200px] mx-auto" />
                     <h5 class="text-center">Concombre</h5>
                     <p class="my-2 text-center">1,20 € Pièce (~356 g)</p>
                     <div class="flex justify-center gap-2 my-4 h-min">

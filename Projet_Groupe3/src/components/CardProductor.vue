@@ -8,7 +8,7 @@ const urlImg0 = img0 && pb.getFileUrl(props, img0, { thumb: '100x200' })
 
 <template>
     <div class="p-2 bg-white w-[130px] rounded-xl shadow-1 lg:w-[245px] mx-auto">
-        <img class="w-full mx-auto" :src="urlImg0" alt="">
-        <h4 class="text-center">{{firstname}} {{ lastname }}</h4>
+        <img class="w-full mx-auto" :src="urlImg0" alt="Photo du producteur">
+        <h4 class="text-center">{{firstname}}</h4>
     </div>
 </template>

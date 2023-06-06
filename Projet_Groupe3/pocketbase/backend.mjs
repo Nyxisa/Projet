@@ -49,3 +49,11 @@ export async function allLegumes() {
     });
     return allLegumesRecords;
 }
+
+// Infos sur un don en donnant son id 
+export async function donById(id) {
+    const donByIdRecords = await pb.collection('donation').getOne(id);
+    return donByIdRecords;
+}
+
+

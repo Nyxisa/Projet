@@ -63,6 +63,13 @@ export async function allLegumes() {
     return allLegumesRecords;
 }
 
+// Infos sur un don en donnant son id 
+export async function donById(id: string) {
+    const donByIdRecords = await pb.collection('donation').getOne<DonationResponse>(id);
+    return donByIdRecords;
+}
+
+
 // export default {
 //     methods: {
 //         //this method allows a new user to sign up the system. Once done, the user receives an email

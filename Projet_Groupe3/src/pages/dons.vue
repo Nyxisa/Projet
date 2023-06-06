@@ -32,10 +32,10 @@ console.log(FavProducteursListe)
     <div class="flex flex-col justify-center gap-4 mx-4 my-10">
         <img src="/img/illu-eco.webp" alt="panier de légumes" class="max-w-[54px] m-auto">
         <h2 class="text-4xl font-bold text-center lg:text-6xl">Sauver des produits&nbsp;?! Comment ça marche&nbsp;?</h2>
-        <img src="/img/deco-poire-banane.webp" alt="panier de légumes" class="m-auto left-[5vw] lg:absolute z-[-1]">
+        <img src="/img/deco-poire-banane.webp" alt="poire et banane" class="m-auto left-[5vw] lg:absolute z-[-1]">
         <p class="text-center lg:text-xl">Vous avez un potager, des invendus, des produits en trop&nbsp;? <br>
             Donnez-les pour bénéficier de nombreuses réductions&nbsp;!</p>
-        <img src="/img/deco-avocat-poivron.webp" alt="panier de légumes" class="right-[5vw] m-auto lg:absolute z-[-1]">
+        <img src="/img/deco-avocat-poivron.webp" alt="avocat et poivron" class="right-[5vw] m-auto lg:absolute z-[-1]">
         <p class="text-center lg:text-xl">Nous récupérons les produits trop <span
                 class="uppercase text-orange">PETITS</span>, trop <span class="uppercase text-orange">TORDUS</span>, trop
             <span class="uppercase text-orange">DIFFORMES</span>.
@@ -86,15 +86,15 @@ console.log(FavProducteursListe)
                 <p>Comme Jade et Maxime ou encore Christophe, faites le choix de donner une seconde vie à vos invendus tout
                     en
                     profitant d'une rémunération supplémentaire.</p>
+                <div class="flex justify-around gap-[2vw] py-0">
+                    <CardProductor class="max-w-[250px] mx-0 xl:hidden" v-for="producteurs in  FavProducteursListe"
+                        :key="producteurs.id" v-bind="{ ...producteurs }" />
+                </div>
                 <RouterLink to="/auth" class="block mx-auto my-8 btn w-fit lg:mx-0">Rejoignez-nous</RouterLink>
             </div>
             <div class="flex justify-around gap-[2vw] py-0">
-                <CardProductor class="max-w-[250px] mx-0 xl:hidden" v-for="producteurs in  FavProducteursListe.slice(0, 1)"
-                    :key="producteurs.id" v-bind="{ ...producteurs }" />
                 <CardProductor class="hidden xl:block" v-for="producteurs in  FavProducteursListe" :key="producteurs.id"
                     v-bind="{ ...producteurs }" />
-
-
             </div>
         </div>
     </section>
