@@ -1,6 +1,12 @@
 <script setup lang="ts">
 import CardProductor from '@/components/CardProductor.vue';
 
+import { allProductors } from '@/backend'
+
+const ProducteursListe = await allProductors();
+
+console.log(ProducteursListe)
+
 
 </script>
 
@@ -15,10 +21,7 @@ import CardProductor from '@/components/CardProductor.vue';
         <h2 class="mb-4 leading-tight">Agriculteurs, Fermiers... Ils sont les producteurs de la Cagette Fermière</h2>
 
         <section class="flex flex-wrap justify-around gap-4 md:gap-8">
-            <CardProductor />
-            <CardProductor />
-            <CardProductor />
-            <CardProductor />
+            <CardProductor v-for="producteurs in ProducteursListe" :key="producteurs.id" v-bind="{ ...producteurs }"/>
         </section>
     </div>
 </template>

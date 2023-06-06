@@ -1,5 +1,6 @@
 import PocketBase from 'pocketbase' ;
 import type { ProductsResponse } from '../src/pocketbase-types';
+import type { ProductorsResponse } from '../src/pocketbase-types';
 
 var pocketbase_ip = ''
 if (import.meta.env.MODE === 'production') // si production
@@ -15,3 +16,10 @@ export async function allProducts() {
 const allProductsRecords = await pb.collection('products').getFullList<ProductsResponse>();
 return allProductsRecords;
 }
+
+// Liste de tous les producteurs 
+export async function allProductors() {
+const allProductorsRecords = await pb.collection('productors').getFullList<ProductorsResponse>();
+return allProductorsRecords;
+}
+
