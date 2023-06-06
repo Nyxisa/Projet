@@ -25,7 +25,7 @@ import CardDon from '@/components/CardDon.vue';
         
         <div><h2>Sauvez ces délicieux fruits & légumes, gratuitement&nbsp;!</h2>
         <div class="flex flex-wrap justify-start gap-4 py-8 lg:gap-16">
-              <CardDon/>
+              <CardDon v-for="dons in DonsListe" :key="dons.id" v-bind="{ ...dons }"/>
               <CardDon/>
               <CardDon/>
               <CardDon/>

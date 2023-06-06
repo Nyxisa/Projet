@@ -47,8 +47,10 @@ export type ContactRecord = {
 export type DonationRecord = {
 	title_donation?: string
 	description?: string
-	localisation?: string
+	img?: string
 	user_donation?: RecordIdString[]
+	distance?: number
+	reservation?: boolean
 }
 
 export type OrdersRecord = {
@@ -85,8 +87,7 @@ export enum ProductsCategoryRefinedOptions {
 	"Légume racine" = "Légume racine",
 	"Légume feuilles" = "Légume feuilles",
 	"Légume bulbe" = "Légume bulbe",
-	"Fruit à pépins" = "Fruit à pépins",
-	"Fruit à noyau" = "Fruit à noyau",
+	"Fruit à pépins et noyaux" = "Fruit à pépins et noyaux",
 	"Fruit sec" = "Fruit sec",
 	"Agrume" = "Agrume",
 }
