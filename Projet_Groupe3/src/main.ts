@@ -7,6 +7,8 @@ import V3ScrollLock from 'v3-scroll-lock'
 import NotFound from '@/components/Page404.vue';
 
 import './assets/css/style.css'
+import CardProductFilter from './components/CardProductFilter.vue'
+import CardProduct from './components/CardProduct.vue'
 
 const app = createApp(App)
 
@@ -32,7 +34,10 @@ app.use(
     {
       path: '/:catchAll(.*)', 
       component: NotFound,
-    },],
+    },
+  { path: '/products/:id', component: CardProduct },
+  { path: '/products/:category', component: CardProductFilter },
+  ],
     scrollBehavior(to, from, savedPosition) {
     scrollToAnchor(to);
   },

@@ -47,6 +47,21 @@ export async function allFavProductors() {
     return allFavProductorsRecords;
 }
    
+// Liste des fruits (affichés sur la page produits) 
+export async function allFruits() {
+    const allFruitsRecords = await pb.collection('products').getFullList<ProductsResponse>({
+        filter : 'category="Fruit"'
+    });
+    return allFruitsRecords;
+}
+
+// Liste des légumes (affichés sur la page produits) 
+export async function allLegumes() {
+    const allLegumesRecords = await pb.collection('products').getFullList<ProductsResponse>({
+        filter : 'category="Légume"'
+    });
+    return allLegumesRecords;
+}
 
 // export default {
 //     methods: {

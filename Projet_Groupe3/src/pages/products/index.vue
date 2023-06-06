@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import CardTest from '@/components/CardTest.vue';
 import PopUpPanier from '@/components/PopUpPanier.vue';
 import CardProduct from '@/components/CardProduct.vue';
+import CardProductFilter from '@/components/CardProductFilter.vue';
 
 import { allProducts } from '@/backend'
 
@@ -35,7 +35,7 @@ console.log(ProduitsListe)
         <div class="flex-col gap-2 p-10 bg-grey rounded-xl w-[250px] h-min hidden lg:flex flex-shrink-0">
             <RouterLink to="" class="">Tout</RouterLink>
             <h5 class="pt-6 text-darkgreen">Légumes</h5>
-            <RouterLink to="" class="">Légumes verts</RouterLink>
+            <RouterLink to="">Légumes verts</RouterLink>
             <RouterLink to="" class="">Légumes racines</RouterLink>
             <RouterLink to="" class="">Légumes feuilles</RouterLink>
             <RouterLink to="" class="">Légumes bulbes</RouterLink>
@@ -47,7 +47,8 @@ console.log(ProduitsListe)
         </div>
 
         <div class="flex flex-wrap justify-center gap-4 py-4 lg:gap-16">
-               <CardProduct v-for="produits in ProduitsListe" :key="produits.id" v-bind="{ ...produits }" />
+               <!-- <CardProduct v-for="produits in ProduitsListe" :key="produits.id" v-bind="{ ...produits }" /> -->
+               <CardProductFilter v-for="produits in ProduitsListe" :key="produits.id" v-bind="{ ...produits }" />
         </div>
     </section>
     <PopUpPanier/>
