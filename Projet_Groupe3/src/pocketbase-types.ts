@@ -74,10 +74,16 @@ export enum ProductsCategoryOptions {
 	"Légume" = "Légume",
 	"Fruit" = "Fruit",
 }
+
+export enum ProductsPriceTypeOptions {
+	"kg" = "kg",
+	"pièce" = "pièce",
+}
 export type ProductsRecord = {
 	designation?: string
 	category?: ProductsCategoryOptions
 	price?: number
+	price_type?: ProductsPriceTypeOptions
 	img?: string
 	productor?: RecordIdString
 	order_product?: RecordIdString[]

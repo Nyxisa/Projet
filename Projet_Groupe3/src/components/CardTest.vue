@@ -28,7 +28,7 @@ function closePopUp() {
                     1.20 € / pièce
                 </p>
             </div>
-            <shoppingBag class="md:max-w-[32px] max-w-[24px]" @click="activePopUp = !activePopUp" />
+            <shoppingBag class="md:max-w-[32px] max-w-[24px]" @click="!closePopUp" />
         </div>
     </div>
 </template>

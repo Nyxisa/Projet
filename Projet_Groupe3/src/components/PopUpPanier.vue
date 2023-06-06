@@ -10,6 +10,8 @@ function closePopUp() {
     activePopUp.value = false
 }
 
+// export { activePopUp, closePopUp }
+
 // import { pb } from '@/backend'
 // import type { ProductsResponse } from '@/pocketbase-types'
 // const props: ProductsResponse = defineProps<ProductsResponse>()
