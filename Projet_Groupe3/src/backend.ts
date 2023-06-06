@@ -30,6 +30,24 @@ const allDonsRecords = await pb.collection('donation').getFullList<DonationRespo
 return allDonsRecords;
 }
 
+// Liste des dons triés par date 
+export async function allDonsSorted() {
+    const allDonsSortedRecords = await pb.collection('donation').getFullList<DonationResponse>({
+        sort: 'created',
+    });
+    return allDonsSortedRecords;
+}
+
+
+// Liste des producteurs favoris (affichés sur la page dons) 
+export async function allFavProductors() {
+    const allFavProductorsRecords = await pb.collection('productors').getFullList<ProductorsResponse>({
+        filter : 'favori = true'
+    });
+    return allFavProductorsRecords;
+}
+   
+
 // export default {
 //     methods: {
 //         //this method allows a new user to sign up the system. Once done, the user receives an email

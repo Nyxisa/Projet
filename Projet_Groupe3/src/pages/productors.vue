@@ -7,7 +7,6 @@ const ProducteursListe = await allProductors();
 
 console.log(ProducteursListe)
 
-
 </script>
 
 <template>
