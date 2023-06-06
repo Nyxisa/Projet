@@ -35,9 +35,8 @@ app.use(
       path: '/:catchAll(.*)', 
       component: NotFound,
     },
-  { path: '/products/:id', component: CardProduct },
-  { path: '/products/:category', component: CardProductFilter },
-  ],
+  { path: '/products/:id', component: CardProduct }
+    ],
     scrollBehavior(to, from, savedPosition) {
     scrollToAnchor(to);
   },

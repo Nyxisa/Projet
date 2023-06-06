@@ -9,7 +9,7 @@ const urlImg0 = img0 && pb.getFileUrl(props, img0, { thumb: '100x200' })
 </script>
 
 <template>
-    <div class="flex flex-col items-center bg-white rounded-xl shadow-1 gap-4 md:max-w-[250px] max-w-[150px] py-4">
+    <!-- <div class="flex flex-col items-center bg-white rounded-xl shadow-1 gap-4 md:max-w-[250px] max-w-[150px] py-4">
         <div class="relative flex flex-col items-start justify-start px-2 bg-white rounded-xl md:px-4">
             <img :src="urlImg0" alt="Produit" class="object-cover rounded-xl" />
         </div>
@@ -22,5 +22,5 @@ const urlImg0 = img0 && pb.getFileUrl(props, img0, { thumb: '100x200' })
             </div>
             <RouterLink :to="{ name: 'product-category', params: { 'category':'Fruit' } }"><shoppingBag class="md:max-w-[32px] max-w-[24px]" /></RouterLink>
         </div>
-    </div>
+    </div> -->
 </template>

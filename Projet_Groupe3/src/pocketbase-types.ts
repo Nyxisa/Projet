@@ -76,6 +76,7 @@ export type ProductorsRecord = {
 	profilepic?: string
 	phone?: number
 	adresse?: string
+	favori?: boolean
 }
 
 export enum ProductsCategoryOptions {
