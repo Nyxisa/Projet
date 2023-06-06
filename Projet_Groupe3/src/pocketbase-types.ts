@@ -79,6 +79,17 @@ export enum ProductsPriceTypeOptions {
 	"kg" = "kg",
 	"pièce" = "pièce",
 }
+
+export enum ProductsCategoryRefinedOptions {
+	"Légume vert" = "Légume vert",
+	"Légume racine" = "Légume racine",
+	"Légume feuilles" = "Légume feuilles",
+	"Légume bulbe" = "Légume bulbe",
+	"Fruit à pépins" = "Fruit à pépins",
+	"Fruit à noyau" = "Fruit à noyau",
+	"Fruit sec" = "Fruit sec",
+	"Agrume" = "Agrume",
+}
 export type ProductsRecord = {
 	designation?: string
 	category?: ProductsCategoryOptions
@@ -87,6 +98,7 @@ export type ProductsRecord = {
 	img?: string
 	productor?: RecordIdString
 	order_product?: RecordIdString[]
+	category_refined?: ProductsCategoryRefinedOptions
 }
 
 export enum SubscriptionCagetteFormuleOptions {
