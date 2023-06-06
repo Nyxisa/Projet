@@ -3,7 +3,6 @@ import { defineComponent } from 'vue';
 
 import CardPhoto from '@/components/CardPhoto.vue';
 import localisation from '@/components/icons/localisation.vue';
-import type localisationVue from '@/components/icons/localisation.vue';
 
 export default defineComponent({
     data() {
@@ -31,8 +30,9 @@ export default defineComponent({
         <label class="font-serif text-3xl font-bold text-center">Type</label>
         <select v-model="categorie" class="form">
             <option disabled value="">Sélectionnez une catégorie</option>
-            <option>Fruit</option>
             <option>Légume</option>
+            <option>Mixte</option>
+            <option>Fruit</option>
         </select>
         <div>
             <label for="titre" class="font-serif text-3xl font-bold">Titre de l'annonce</label>

@@ -48,7 +48,7 @@ function closePopUp() {
                     </div>
                 </div>
                 <div class="flex justify-between px-4 py-6 border-t-2 border-grey">
-                    <RouterLink class="btn" to="">Continuer mes achats</RouterLink>
+                    <RouterLink class="btn" to="/products">Continuer mes achats</RouterLink>
                     <div class="flex items-center gap-4">
                         <shoppingBag />
                         <p class="mb-0">Panier : 0,00€</p>
@@ -86,7 +86,7 @@ function closePopUp() {
                         <p class="mb-0">Panier : 0,00€</p>
                     </div>
                     <div class="flex justify-center">
-                        <RouterLink class="btn" to="">Continuer mes achats</RouterLink>
+                        <RouterLink class="btn" to="/products">Continuer mes achats</RouterLink>
                     </div>
                 </div>
             </div>

@@ -13,10 +13,10 @@ import CardProductor from '@/components/CardProductor.vue';
         </div>
     </div>
     <div class="flex w-full">
-        <RouterLink to="/"
+        <RouterLink to="/donner"
             class="btn-don don">
             Donner</RouterLink>
-        <RouterLink to="/"
+        <RouterLink to="/sauver"
             class="bg-orange active:border-orange btn-don don">
             Sauver</RouterLink>
     </div>
@@ -32,7 +32,7 @@ import CardProductor from '@/components/CardProductor.vue';
             <span class="uppercase text-orange">DIFFORMES</span>.
         </p>
         <h3 class="text-3xl font-bold text-center text-darkgreen lg:text-5xl">Mais toujours aussi savoureux&nbsp;!</h3>
-        <RouterLink to="/" class="mx-auto my-8 btn">
+        <RouterLink to="/donner" class="mx-auto my-8 btn">
             FAIRE UN DON</RouterLink>
     </div>
 
@@ -50,7 +50,7 @@ import CardProductor from '@/components/CardProductor.vue';
                 <p class="mb-6">Rejoignez notre communauté engagée et faites profiter de nombreuses personnes de vos
                     récoltes&nbsp;!
                 </p>
-                <RouterLink to="/" class="block mx-auto my-8 btn w-fit lg:mx-0">Je veux donner</RouterLink>
+                <RouterLink to="/donner" class="block mx-auto my-8 btn w-fit lg:mx-0">Je veux donner</RouterLink>
             </div>
                 <div class="flex py-6 space-x-2 overflow-x-auto lg:gap-12 lg:py-0 lg:w-[30vw] lg:overflow-visible">
                     <CardDon class="max-w-[250px] w-full" />
@@ -74,7 +74,7 @@ import CardProductor from '@/components/CardProductor.vue';
                 <p>Comme Jade et Maxime ou encore Christophe, faites le choix de donner une seconde vie à vos invendus tout
                     en
                     profitant d'une rémunération supplémentaire.</p>
-                <RouterLink to="/" class="block mx-auto my-8 btn w-fit lg:mx-0">Rejoignez-nous</RouterLink>
+                <RouterLink to="/auth" class="block mx-auto my-8 btn w-fit lg:mx-0">Rejoignez-nous</RouterLink>
             </div>
             <div class="flex justify-around gap-[2vw] py-0">
                 <CardProductor class="max-w-[250px] w-full" />

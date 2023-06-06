@@ -83,7 +83,7 @@
     <section class="px-[8vw] py-6">
         <h2 class="mb-4">Vos abonnement</h2>
         <p class="mb-10">Vous n'avez encore aucun abonnement aux cagettes.</p>
-        <RouterLink to="/" class="btn">
+        <RouterLink to="/abonnements" class="btn">
             S'abonner</RouterLink>
     </section>
 </template>

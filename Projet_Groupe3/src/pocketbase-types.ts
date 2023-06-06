@@ -44,6 +44,11 @@ export type ContactRecord = {
 	message?: string
 }
 
+export enum DonationTypeOptions {
+	"Fruit" = "Fruit",
+	"Légume" = "Légume",
+	"Mixte" = "Mixte",
+}
 export type DonationRecord = {
 	title_donation?: string
 	description?: string
@@ -51,6 +56,7 @@ export type DonationRecord = {
 	user_donation?: RecordIdString[]
 	distance?: number
 	reservation?: boolean
+	type?: DonationTypeOptions
 }
 
 export type OrdersRecord = {

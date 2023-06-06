@@ -36,6 +36,7 @@ console.log(DonsListe)
     </div>
     <div class="flex justify-around p-4 space-x-2 lg:hidden">
         <button class="w-full btn-filter">Légumes</button>
+        <button class="w-full btn-filter">Mixte</button>
         <button class="w-full btn-filter">Fruits</button>
     </div>
     <section class="px-[7vw] lg:py-10 flex gap-8">
@@ -49,7 +50,7 @@ console.log(DonsListe)
             </div>
             <div class="hidden md:block">
                 <h3 class="mb-6 leading-tight text-darkgreen">Vous souhaitez donner vous aussi&nbsp;?</h3>
-                <RouterLink to="/" class="mx-auto my-8 btn">Créer une annonce</RouterLink>
+                <RouterLink to="/donner" class="mx-auto my-8 btn">Créer une annonce</RouterLink>
             </div>
         </div>
 

@@ -54,7 +54,7 @@ import CardEtape from '@/components/CardEtape.vue';
             <span class="uppercase text-orange">DIFFORMES</span>.
         </p>
         <h3 class="text-3xl font-bold text-center text-darkgreen lg:text-5xl">Mais toujours aussi savoureux&nbsp;!</h3>
-        <RouterLink to="/" class="m-auto my-8 btn">
+        <RouterLink to="/dons" class="m-auto my-8 btn">
             FAIRE UN DON</RouterLink>
     </div>
 </template>
