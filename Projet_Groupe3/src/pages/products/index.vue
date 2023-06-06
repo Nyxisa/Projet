@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import CardTest from '@/components/CardTest.vue';
 import PopUpPanier from '@/components/PopUpPanier.vue';
-
 import CardProduct from '@/components/CardProduct.vue';
+
 import { allProducts } from '@/backend'
 
 const ProduitsListe = await allProducts();
@@ -47,15 +47,9 @@ console.log(ProduitsListe)
         </div>
 
         <div class="flex flex-wrap justify-center gap-4 py-4 lg:gap-16">
-            <CardTest />
-            <CardTest />
-            <CardTest />
-            <CardTest />
-            <CardTest />
-            <CardTest />
-            <CardTest />
+               <CardProduct v-for="produits in ProduitsListe" :key="produits.id" v-bind="{ ...produits }" />
         </div>
     </section>
-    <PopUpPanier />
-    <CardProduct v-for="produits in ProduitsListe" :key="produits.id" v-bind="{ ...produits }" />
+    <PopUpPanier/>
+  
 </template>
