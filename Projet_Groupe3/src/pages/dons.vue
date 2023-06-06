@@ -77,7 +77,7 @@ console.log(FavProducteursListe)
 
         <h5>Devenir partenaire</h5>
         <h3 class="mb-2 text-darkgreen">Vous êtes Agriculteur, Fermier, Producteur...?</h3>
-        <div class="items-start gap-8 lg:flex">
+        <div class="items-start gap-8 md:flex">
             <div>
                 <p class="pt-2">Si vous êtes agriculteur dans le Lot et Garonne vous pouvez devenir partenaire avec la
                     Cagette Fermière&nbsp;!
@@ -91,8 +91,8 @@ console.log(FavProducteursListe)
             <div class="flex justify-around gap-[2vw] py-0">
                 <CardProductor class="max-w-[250px] mx-0 xl:hidden" v-for="producteurs in  FavProducteursListe.slice(0, 1)"
                     :key="producteurs.id" v-bind="{ ...producteurs }" />
-                <CardProductor class="hidden xl:block" v-for="producteurs in  FavProducteursListe"
-                    :key="producteurs.id" v-bind="{ ...producteurs }" />
+                <CardProductor class="hidden xl:block" v-for="producteurs in  FavProducteursListe" :key="producteurs.id"
+                    v-bind="{ ...producteurs }" />
 
 
             </div>
