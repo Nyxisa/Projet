@@ -39,24 +39,24 @@ console.log(DonsListe)
         <button class="w-full btn-filter">Mixte</button>
         <button class="w-full btn-filter">Fruits</button>
     </div>
-    <section class="px-[7vw] lg:py-10 flex gap-8">
+    <section class="px-[7vw] lg:py-10 flex lg:gap-8 pb-10">
         <div class="flex flex-col gap-4">
-            <div class="flex-col gap-2 p-6 bg-grey rounded-xl w-[300px] h-min hidden flex-shrink-0 md:flex">
+            <div class="flex-col gap-2 p-6 bg-grey rounded-xl w-[300px] h-min hidden flex-shrink-0 lg:flex">
                 <h5 class="text-darkgreen">Catégorie</h5>
                 <RouterLink to="" class="">Légumes</RouterLink>
                 <RouterLink to="" class="">Fruits</RouterLink>
                 <h5 class="py-6 text-darkgreen">Distance (km) : {{ cursorValue }} km</h5>
                 <Cursor :value="cursorValue" :min="0" :max="20" @input="updateCursorValue" />
             </div>
-            <div class="hidden md:block">
+            <div class="hidden lg:block">
                 <h3 class="mb-6 leading-tight text-darkgreen">Vous souhaitez donner vous aussi&nbsp;?</h3>
                 <RouterLink to="/donner" class="mx-auto my-8 btn">Créer une annonce</RouterLink>
             </div>
         </div>
 
         <div>
-            <h2 class="hidden md:block">Sauvez ces délicieux fruits & légumes, gratuitement&nbsp;!</h2>
-            <div class="flex flex-wrap justify-start gap-4 lg:py-8 lg:gap-16">
+            <h2 class="hidden lg:block">Sauvez ces délicieux fruits & légumes, gratuitement&nbsp;!</h2>
+            <div class="flex flex-wrap justify-center gap-4 lg:justify-start lg:py-8 lg:gap-16">
                 <CardDon v-for="dons in DonsListe" :key="dons.id" v-bind="{ ...dons }" />
             </div>
         </div>
