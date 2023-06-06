@@ -44,11 +44,19 @@ export type ContactRecord = {
 	message?: string
 }
 
+export enum DonationTypeOptions {
+	"Fruit" = "Fruit",
+	"Légume" = "Légume",
+	"Mixte" = "Mixte",
+}
 export type DonationRecord = {
 	title_donation?: string
 	description?: string
-	localisation?: string
+	img?: string
 	user_donation?: RecordIdString[]
+	distance?: number
+	reservation?: boolean
+	type?: DonationTypeOptions
 }
 
 export type OrdersRecord = {
@@ -68,6 +76,7 @@ export type ProductorsRecord = {
 	profilepic?: string
 	phone?: number
 	adresse?: string
+	favori?: boolean
 }
 
 export enum ProductsCategoryOptions {
@@ -85,8 +94,7 @@ export enum ProductsCategoryRefinedOptions {
 	"Légume racine" = "Légume racine",
 	"Légume feuilles" = "Légume feuilles",
 	"Légume bulbe" = "Légume bulbe",
-	"Fruit à pépins" = "Fruit à pépins",
-	"Fruit à noyau" = "Fruit à noyau",
+	"Fruit à pépins et noyaux" = "Fruit à pépins et noyaux",
 	"Fruit sec" = "Fruit sec",
 	"Agrume" = "Agrume",
 }

@@ -1,5 +1,7 @@
 import PocketBase from 'pocketbase' ;
 import type { ProductsResponse } from '../src/pocketbase-types';
+import type { ProductorsResponse } from '../src/pocketbase-types';
+import type { DonationResponse } from '../src/pocketbase-types';
 
 var pocketbase_ip = ''
 if (import.meta.env.MODE === 'production') // si production
@@ -15,3 +17,77 @@ export async function allProducts() {
 const allProductsRecords = await pb.collection('products').getFullList<ProductsResponse>();
 return allProductsRecords;
 }
+
+// Liste de tous les producteurs 
+export async function allProductors() {
+const allProductorsRecords = await pb.collection('productors').getFullList<ProductorsResponse>();
+return allProductorsRecords;
+}
+
+// Liste de tous les dons
+export async function allDons() {
+const allDonsRecords = await pb.collection('donation').getFullList<DonationResponse>();
+return allDonsRecords;
+}
+
+// Liste des dons triés par date 
+export async function allDonsSorted() {
+    const allDonsSortedRecords = await pb.collection('donation').getFullList<DonationResponse>({
+        sort: 'created',
+    });
+    return allDonsSortedRecords;
+}
+
+
+// Liste des producteurs favoris (affichés sur la page dons) 
+export async function allFavProductors() {
+    const allFavProductorsRecords = await pb.collection('productors').getFullList<ProductorsResponse>({
+        filter : 'favori = true'
+    });
+    return allFavProductorsRecords;
+}
+   
+// Liste des fruits (affichés sur la page produits) 
+export async function allFruits() {
+    const allFruitsRecords = await pb.collection('products').getFullList<ProductsResponse>({
+        filter : 'category="Fruit"'
+    });
+    return allFruitsRecords;
+}
+
+// Liste des légumes (affichés sur la page produits) 
+export async function allLegumes() {
+    const allLegumesRecords = await pb.collection('products').getFullList<ProductsResponse>({
+        filter : 'category="Légume"'
+    });
+    return allLegumesRecords;
+}
+
+// Infos sur un don en donnant son id 
+export async function donById(id: string) {
+    const donByIdRecords = await pb.collection('donation').getOne<DonationResponse>(id);
+    return donByIdRecords;
+}
+
+
+// export default {
+//     methods: {
+//         //this method allows a new user to sign up the system. Once done, the user receives an email
+//         //asking for account validation. Once the validation made the user is added to the system
+//         async login() {
+//             await pb.collection('users').authWithPassword(document.getElementById("login").value,
+//                 document.getElementById("passwd").value);
+//         },
+//         //this method allows the already registred user to log in the system.
+//         async register() {
+//             await pb.collection('users').create({
+//                 email: document.getElementById("login").value,
+//                 password: document.getElementById("passwd").value,
+//                 passwordConfirm: document.getElementById("passwd").value,
+//                 name: 'John Di',
+//             });
+//         }
+
+//     }
+// }
+

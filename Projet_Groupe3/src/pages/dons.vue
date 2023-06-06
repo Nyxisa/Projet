@@ -2,6 +2,17 @@
 import CardDon from '@/components/CardDon.vue';
 import CardProductor from '@/components/CardProductor.vue';
 
+import { allDonsSorted, allProductors, allFavProductors } from '@/backend'
+
+const DonsSortedListe = await allDonsSorted();
+console.log(DonsSortedListe)
+
+const ProducteursListe = await allProductors();
+console.log(ProducteursListe)
+
+const FavProducteursListe = await allFavProductors();
+console.log(FavProducteursListe)
+
 
 </script>
 
@@ -13,26 +24,24 @@ import CardProductor from '@/components/CardProductor.vue';
         </div>
     </div>
     <div class="flex w-full">
-        <RouterLink to="/"
-            class="btn-don don">
+        <RouterLink to="/donner" class="btn-don don">
             Donner</RouterLink>
-        <RouterLink to="/"
-            class="bg-orange active:border-orange btn-don don">
+        <RouterLink to="/sauver" class="bg-orange active:border-orange btn-don don">
             Sauver</RouterLink>
     </div>
     <div class="flex flex-col justify-center gap-4 mx-4 my-10">
         <img src="/img/illu-eco.webp" alt="panier de légumes" class="max-w-[54px] m-auto">
         <h2 class="text-4xl font-bold text-center lg:text-6xl">Sauver des produits&nbsp;?! Comment ça marche&nbsp;?</h2>
-        <img src="/img/deco-poire-banane.webp" alt="panier de légumes" class="m-auto left-[5vw] lg:absolute z-[-1]">
+        <img src="/img/deco-poire-banane.webp" alt="poire et banane" class="m-auto left-[5vw] lg:absolute z-[-1]">
         <p class="text-center lg:text-xl">Vous avez un potager, des invendus, des produits en trop&nbsp;? <br>
             Donnez-les pour bénéficier de nombreuses réductions&nbsp;!</p>
-        <img src="/img/deco-avocat-poivron.webp" alt="panier de légumes" class="right-[5vw] m-auto lg:absolute z-[-1]">
+        <img src="/img/deco-avocat-poivron.webp" alt="avocat et poivron" class="right-[5vw] m-auto lg:absolute z-[-1]">
         <p class="text-center lg:text-xl">Nous récupérons les produits trop <span
                 class="uppercase text-orange">PETITS</span>, trop <span class="uppercase text-orange">TORDUS</span>, trop
             <span class="uppercase text-orange">DIFFORMES</span>.
         </p>
         <h3 class="text-3xl font-bold text-center text-darkgreen lg:text-5xl">Mais toujours aussi savoureux&nbsp;!</h3>
-        <RouterLink to="/" class="mx-auto my-8 btn">
+        <RouterLink to="/donner" class="mx-auto my-8 btn">
             FAIRE UN DON</RouterLink>
     </div>
 
@@ -40,9 +49,10 @@ import CardProductor from '@/components/CardProductor.vue';
 
         <h5>Donner des produits</h5>
         <h3 class="mb-2 text-darkgreen">Vous êtes un particulier&nbsp;?</h3>
-        <div class="items-start gap-[4vw] lg:flex">
+        <div class="items-start lg:gap-[4vw] lg:flex">
             <div>
-                <p class="pt-2">Découvrez les étapes à suivre pour faire des dons de produits grâce à La Cagette Fermière.</p>
+                <p class="pt-2">Découvrez les étapes à suivre pour faire des dons de produits grâce à La Cagette Fermière.
+                </p>
                 <p>Chez La Cagette Fermière, la solidarité et le partage sont des valeurs fortes.</p>
                 <p>C'est pourquoi faire un don vous permet de bénéficiez de 20% de réduction sur votre panier lors de votre
                     première
@@ -50,14 +60,16 @@ import CardProductor from '@/components/CardProductor.vue';
                 <p class="mb-6">Rejoignez notre communauté engagée et faites profiter de nombreuses personnes de vos
                     récoltes&nbsp;!
                 </p>
-                <RouterLink to="/" class="block mx-auto my-8 btn w-fit lg:mx-0">Je veux donner</RouterLink>
+                <RouterLink to="/donner" class="block mx-auto my-8 btn w-fit lg:mx-0">Je veux donner</RouterLink>
             </div>
-                <div class="flex py-6 space-x-2 overflow-x-auto lg:gap-12 lg:py-0 lg:w-[30vw] lg:overflow-visible">
-                    <CardDon class="max-w-[250px] w-full" />
-                    <CardDon class="lg:hidden" />
-                    <CardDon class="lg:hidden" />
-                </div>
-            
+            <div class="lg:flex py-6 space-x-2 lg:gap-12 lg:py-0 lg:w-[30vw] w-fit mx-auto">
+                <!-- <CardDon class="max-w-[250px] w-full" /> -->
+                <CardDon class="max-w-[250px] mx-0 xl:hidden" v-for="dons in DonsSortedListe.slice(0, 1)" :key="dons.id"
+                    v-bind="{ ...dons }" />
+                <CardDon class="hidden xl:block" v-for="dons in DonsSortedListe.slice(0, 2)" :key="dons.id"
+                    v-bind="{ ...dons }" />
+            </div>
+
         </div>
     </section>
     <section class="px-[8vw] py-12">
@@ -65,7 +77,7 @@ import CardProductor from '@/components/CardProductor.vue';
 
         <h5>Devenir partenaire</h5>
         <h3 class="mb-2 text-darkgreen">Vous êtes Agriculteur, Fermier, Producteur...?</h3>
-        <div class="items-start gap-8 lg:flex">
+        <div class="items-start gap-8 md:flex">
             <div>
                 <p class="pt-2">Si vous êtes agriculteur dans le Lot et Garonne vous pouvez devenir partenaire avec la
                     Cagette Fermière&nbsp;!
@@ -74,11 +86,15 @@ import CardProductor from '@/components/CardProductor.vue';
                 <p>Comme Jade et Maxime ou encore Christophe, faites le choix de donner une seconde vie à vos invendus tout
                     en
                     profitant d'une rémunération supplémentaire.</p>
-                <RouterLink to="/" class="block mx-auto my-8 btn w-fit lg:mx-0">Rejoignez-nous</RouterLink>
+                <div class="flex justify-around gap-[2vw] py-0">
+                    <CardProductor class="max-w-[250px] mx-0 xl:hidden" v-for="producteurs in  FavProducteursListe"
+                        :key="producteurs.id" v-bind="{ ...producteurs }" />
+                </div>
+                <RouterLink to="/auth" class="block mx-auto my-8 btn w-fit lg:mx-0">Rejoignez-nous</RouterLink>
             </div>
             <div class="flex justify-around gap-[2vw] py-0">
-                <CardProductor class="max-w-[250px] w-full" />
-                <CardProductor class="max-w-[250px] w-full" />
+                <CardProductor class="hidden xl:block" v-for="producteurs in  FavProducteursListe" :key="producteurs.id"
+                    v-bind="{ ...producteurs }" />
             </div>
         </div>
     </section>

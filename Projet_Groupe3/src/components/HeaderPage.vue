@@ -57,12 +57,12 @@ function closeMenu() {
           </li>
           <li class="mt-10 menu-item">
             <RouterLink @click="closeMenu"
-              class="text-3xl border-2 border-solid rounded-full menu-link lg:hidden text-orange" to="/">S'inscrire
+              class="text-3xl border-2 border-solid rounded-full menu-link lg:hidden text-orange" to="/auth">S'inscrire
             </RouterLink>
           </li>
           <li class="menu-item">
             <RouterLink @click="closeMenu"
-              class="text-3xl border-2 border-solid rounded-full menu-link lg:hidden text-orange" to="/">Se
+              class="text-3xl border-2 border-solid rounded-full menu-link lg:hidden text-orange" to="/auth">Se
               connecter
             </RouterLink>
           </li>
@@ -75,7 +75,7 @@ function closeMenu() {
       <div class="flex items-center">
         <div class="md:flex">
           <li>
-            <RouterLink to="/compte"
+            <RouterLink to="/auth"
               class="hidden rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-indigo-600 transition hover:fill-lightgreen md:block">
               <user />
             </RouterLink>

@@ -26,7 +26,7 @@ function containsFruit(name: string): boolean {
     <div class="flex flex-col items-center overflow-hidden bg-white rounded-xl shadow-1 gap-4 m-[5vw] max-w-[330px]">
         <div class="relative flex flex-col items-center self-stretch justify-start overflow-hidden rounded-t-xl bg-darkgreen"
             :class="{ 'bg-darkgreen': title !== 'Abonnement Light', 'bg-orange': title === 'Abonnement Light' }">
-            <p class="font-serif text-2xl font-bold text-center text-white lg:text-3xl">{{ title }}
+            <p class="my-2 font-serif text-2xl font-bold text-center text-white lg:text-3xl">{{ title }}
             </p>
         </div>
         <div

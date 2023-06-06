@@ -7,7 +7,7 @@ import instagram from '@/components/icons/instagram.vue'
 
 <template>
     <footer>
-        <div class="justify-center gap-8 py-8 md:px-8 lg:grille bg-brown md:flex">
+        <div class="justify-center gap-8 py-8 md:px-8 lg:grille bg-brown md:flex lg:grid">
             <div class="flex flex-row justify-center col-span-3 col-start-1 gap-4 md:flex-col md:gap-0">
                 <RouterLink to="/" class="block">
                     <Logo />
@@ -35,7 +35,7 @@ import instagram from '@/components/icons/instagram.vue'
                 <h4 class="font-serif text-2xl text-center text-white md:text-left">La cagette fermière</h4>
                 <RouterLink to="/products" class="footer-link">Nos produits</RouterLink>
                 <RouterLink to="/abonnements" class="footer-link">Nos cagettes</RouterLink>
-                <RouterLink to="/dons" class="footer-link">Faire un don de produits</RouterLink>
+                <RouterLink to="/dons" class="footer-link">Les dons</RouterLink>
             </nav>
 
             <nav class="col-span-2 col-start-6 my-6">

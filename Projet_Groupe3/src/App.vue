@@ -14,9 +14,9 @@ useHead({
   <HeaderPage />
 
   <main class="pt-[64px] md:pt-[72px] lg:pt-[128px]">
-      <Suspense>
-        <RouterView />
-      </Suspense>
+    <Suspense>
+      <RouterView />
+    </Suspense>
   </main>
 
   <FooterPage />

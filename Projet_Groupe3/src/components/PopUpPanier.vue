@@ -48,7 +48,7 @@ function closePopUp() {
                     </div>
                 </div>
                 <div class="flex justify-between px-4 py-6 border-t-2 border-grey">
-                    <RouterLink class="btn" to="">Continuer mes achats</RouterLink>
+                    <RouterLink class="btn" to="/products">Continuer mes achats</RouterLink>
                     <div class="flex items-center gap-4">
                         <shoppingBag />
                         <p class="mb-0">Panier : 0,00€</p>
@@ -66,7 +66,7 @@ function closePopUp() {
             </div>
             <div class="bg-white rounded-b-xl">
                 <div class="py-6">
-                    <img src="/img/legume-pic.webp" alt="" class="object-cover rounded-xl h-[150px] w-[200px] mx-auto" />
+                    <img src="/img/legume-pic.webp" alt="produit" class="object-cover rounded-xl h-[150px] w-[200px] mx-auto" />
                     <h5 class="text-center">Concombre</h5>
                     <p class="my-2 text-center">1,20 € Pièce (~356 g)</p>
                     <div class="flex justify-center gap-2 my-4 h-min">
@@ -86,7 +86,7 @@ function closePopUp() {
                         <p class="mb-0">Panier : 0,00€</p>
                     </div>
                     <div class="flex justify-center">
-                        <RouterLink class="btn" to="">Continuer mes achats</RouterLink>
+                        <RouterLink class="btn" to="/products">Continuer mes achats</RouterLink>
                     </div>
                 </div>
             </div>
