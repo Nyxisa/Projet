@@ -3,7 +3,7 @@ import Message from './icons/message.vue';
 import { pb } from '@/backend'
 import type { DonationResponse } from '@/pocketbase-types'
 const props: DonationResponse = defineProps<DonationResponse>()
-const img0 = props.profilepic
+const img0 = props.img
 const urlImg0 = img0 && pb.getFileUrl(props, img0, { thumb: '100x200' })
 
 
@@ -18,7 +18,7 @@ const urlImg0 = img0 && pb.getFileUrl(props, img0, { thumb: '100x200' })
 
 
                 <div class="px-[1vh] relative flex items-center self-stretch justify-between my-2">
-                    <p class="mb-0 text-base break-words lg:text-3xl">{{ titre }}</p>
+                    <p class="mb-0 text-base break-words lg:text-3xl">{{ title_donation }}</p>
                     <Message class="w-[36px]" />
                 </div>
                 <div class="pb-2 px-[1vh]">

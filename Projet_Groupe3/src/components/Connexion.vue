@@ -25,7 +25,7 @@ export
                             <label for="password" class="font-serif text-3xl font-bold">Mot de passe</label>
                             <input v-model="password" id="passwd" placeholder="Entrez votre mot de passe" class="form">
                         </div>
-                        <button type="submit" class="block mx-auto mt-6 btn">S'identifier</button>
+                        <button v-on:click="login()" type="submit" class="block mx-auto mt-6 btn">S'identifier</button>
                     </form>
                 </div>
             </div>
@@ -44,55 +44,10 @@ export
                             <input v-model="password" id="passwd" placeholder="Entrez votre mot de passe" class="form">
                             <input v-model="password" id="passwd" placeholder="Confirmez votre mot de passe" class="form">
                         </div>
-                        <button type="submit" class="block mx-auto mt-6 btn">Créer mon compte</button>
+                        <button v-on:click="register()" type="submit" class="block mx-auto mt-6 btn">Créer mon compte</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </template>
-
-<template>
-    <header>
-        <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-        <div>
-            <label width="50px">Login : </label><input type="email" id="login">
-            <p></p>
-            <label width="50px">Password : </label><input type="password" id="passwd">
-            <p></p>
-            <hr>
-            <button v-on:click="register()">Register</button>
-            <button v-on:click="login()">Login</button>
-            <p></p>
-        </div>
-    </header>
-
-    <main>
-        <!-- <TheWelcome /> -->
-    </main>
-</template>
-
-<script>
-const pb = new PocketBase('http://192.168.1.126:8004')
-export default {
-    methods: {
-        //this method allows a new user to sign up the system. Once done, the user receives an email
-        //asking for account validation. Once the validation made the user is added to the system
-        async login() {
-            await pb.collection('users').authWithPassword(document.getElementById("login").value,
-                document.getElementById("passwd").value);
-        },
-        //this method allows the already registred user to log in the system.
-        async register() {
-            await pb.collection('users').create({
-                email: document.getElementById("login").value,
-                password: document.getElementById("passwd").value,
-                passwordConfirm: document.getElementById("passwd").value,
-                name: 'John Di',
-            });
-        }
-
-    }
-}
-</script>

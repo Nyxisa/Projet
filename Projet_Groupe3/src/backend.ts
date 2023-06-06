@@ -1,6 +1,7 @@
 import PocketBase from 'pocketbase' ;
 import type { ProductsResponse } from '../src/pocketbase-types';
 import type { ProductorsResponse } from '../src/pocketbase-types';
+import type { DonationResponse } from '../src/pocketbase-types';
 
 var pocketbase_ip = ''
 if (import.meta.env.MODE === 'production') // si production
@@ -29,24 +30,24 @@ const allDonsRecords = await pb.collection('donation').getFullList<DonationRespo
 return allDonsRecords;
 }
 
-export default {
-    methods: {
-        //this method allows a new user to sign up the system. Once done, the user receives an email
-        //asking for account validation. Once the validation made the user is added to the system
-        async login() {
-            await pb.collection('users').authWithPassword(document.getElementById("login").value,
-                document.getElementById("passwd").value);
-        },
-        //this method allows the already registred user to log in the system.
-        async register() {
-            await pb.collection('users').create({
-                email: document.getElementById("login").value,
-                password: document.getElementById("passwd").value,
-                passwordConfirm: document.getElementById("passwd").value,
-                name: 'John Di',
-            });
-        }
+// export default {
+//     methods: {
+//         //this method allows a new user to sign up the system. Once done, the user receives an email
+//         //asking for account validation. Once the validation made the user is added to the system
+//         async login() {
+//             await pb.collection('users').authWithPassword(document.getElementById("login").value,
+//                 document.getElementById("passwd").value);
+//         },
+//         //this method allows the already registred user to log in the system.
+//         async register() {
+//             await pb.collection('users').create({
+//                 email: document.getElementById("login").value,
+//                 password: document.getElementById("passwd").value,
+//                 passwordConfirm: document.getElementById("passwd").value,
+//                 name: 'John Di',
+//             });
+//         }
 
-    }
-}
+//     }
+// }
 

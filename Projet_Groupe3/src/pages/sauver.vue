@@ -1,6 +1,29 @@
 <script setup lang="ts">
 import Cursor from '@/components/Cursor.vue'
 import CardDon from '@/components/CardDon.vue';
+
+import { ref } from 'vue';
+
+interface CursorProps {
+    value: number;
+    min: number;
+    max: number;
+}
+
+const cursorValue = ref(15);
+
+const updateCursorValue = (event: Event) => {
+    const value = parseInt((event.target as HTMLInputElement).value, 10);
+    if (!isNaN(value)) {
+        cursorValue.value = value;
+    }
+};
+
+import { allDons } from '@/backend'
+
+const DonsListe = await allDons();
+
+console.log(DonsListe)
 </script>
 
 <template>
@@ -11,29 +34,25 @@ import CardDon from '@/components/CardDon.vue';
         </div>
     </div>
     <section class="px-[7vw] py-10 flex gap-8">
-        <div class="flex flex-col gap-4"> 
+        <div class="flex flex-col gap-4">
             <div class="flex-col gap-2 p-6 bg-grey rounded-xl w-[300px] h-min hidden lg:flex flex-shrink-0">
-            <h5 class="text-darkgreen">Catégorie</h5>
-            <RouterLink to="" class="">Légumes</RouterLink>
-            <RouterLink to="" class="">Fruits</RouterLink>
-            <h5 class="py-6 text-darkgreen">Distance (km) : 15 km</h5>
-            <Cursor :value="10" :min="0" :max="20" />
+                <h5 class="text-darkgreen">Catégorie</h5>
+                <RouterLink to="" class="">Légumes</RouterLink>
+                <RouterLink to="" class="">Fruits</RouterLink>
+                <h5 class="py-6 text-darkgreen">Distance (km) : {{ cursorValue }} km</h5>
+                <Cursor :value="cursorValue" :min="0" :max="20" @input="updateCursorValue" />
+            </div>
+            <h3 class="text-darkgreen">Vous souhaitez donner vous aussi&nbsp;?</h3>
+            <RouterLink to="/" class="mx-auto my-8 btn">Créer une annonce</RouterLink>
         </div>
-        <h3 class="text-darkgreen">Vous souhaitez donner vous aussi&nbsp;?</h3>
-        <RouterLink to="/" class="mx-auto my-8 btn">Créer une annonce</RouterLink>
-    </div>
-        
-        <div><h2>Sauvez ces délicieux fruits & légumes, gratuitement&nbsp;!</h2>
-        <div class="flex flex-wrap justify-start gap-4 py-8 lg:gap-16">
-              <CardDon v-for="dons in DonsListe" :key="dons.id" v-bind="{ ...dons }"/>
-              <CardDon/>
-              <CardDon/>
-              <CardDon/>
-              <CardDon/>
-              <CardDon/>
-              <CardDon/>
-               
-            </div></div>
+
+        <div>
+            <h2>Sauvez ces délicieux fruits & légumes, gratuitement&nbsp;!</h2>
+            <div class="flex flex-wrap justify-start gap-4 py-8 lg:gap-16">
+                <CardDon v-for="dons in DonsListe" :key="dons.id" v-bind="{ ...dons }" />
+
+            </div>
+        </div>
     </section>
 </template>
 
