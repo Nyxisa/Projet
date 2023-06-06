@@ -17,7 +17,7 @@ import CardEtape from '@/components/CardEtape.vue';
                 légumes&nbsp;!</p>
         </div>
 
-        <div class="flex flex-wrap justify-center">
+        <div class="flex flex-wrap justify-center px-4">
             <CardCagette title="Abonnement Light" imgPath="/img/cagette-1.webp"
                 imgAlt="Cagette remplie de fruits et légumes" price="20 €" name1="1kg | Pomme de terre" name2="0.2kg | Ail"
                 name3="0.5kg | Abricots" name4="1kg | Tomates" name5="0.5kg | Fraises" name6="1kg | Pêches"
